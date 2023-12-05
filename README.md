@@ -1,4 +1,4 @@
-# qsv.pro
+# qsv-pro-web
 
 Promotional website for qsv pro. Based on the [Tailcast template](https://github.com/matt765/Tailcast) using Astro.
 
@@ -8,7 +8,7 @@ Astro, React, Tailwind, Framer Motion
 
 ## Live link
 
-[https://dathere.github.io/qsv.pro](https://dathere.github.io/qsv.pro)
+[https://dathere.github.io/qsv-pro-web](https://dathere.github.io/qsv-pro-web)
 
 ## How to run
 
