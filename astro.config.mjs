@@ -3,7 +3,6 @@ import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
 
 export default defineConfig({
-    site: "https://dathere.github.io",
-    base: "/qsv-pro-web",
+    site: "https://qsvpro.dathere.com",
     integrations: [react(), tailwind()],
 });

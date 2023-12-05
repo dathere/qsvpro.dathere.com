@@ -8,7 +8,7 @@ Astro, React, Tailwind, Framer Motion
 
 ## Live link
 
-[https://dathere.github.io/qsv-pro-web](https://dathere.github.io/qsv-pro-web)
+[https://qsvpro.dathere.com](https://qsvpro.dathere.com)
 
 ## How to run
 
