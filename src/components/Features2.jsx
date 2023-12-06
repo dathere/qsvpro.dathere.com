@@ -30,8 +30,16 @@ export const Features2 = () => (
                         </h2>
                         <p className="mb-12 text-customGrayText leading-loose">
                             qsv pro allows you to upload your transformed data
-                            to a CKAN datastore & a data dictionary to specify
-                            file metadata.
+                            to a{" "}
+                            <a
+                                href="https://ckan.org"
+                                target="_blank"
+                                className="text-blue-300"
+                            >
+                                CKAN
+                            </a>{" "}
+                            datastore & a data dictionary to specify file
+                            metadata.
                         </p>
                         <ul className="mb-6 text-white">
                             <li className="mb-4 flex">
