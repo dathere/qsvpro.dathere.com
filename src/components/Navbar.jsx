@@ -39,7 +39,7 @@ export const Navbar = () => {
                             <img
                                 src={qsvProLogo}
                                 alt="qsv pro logo"
-                                className="w-24 h-6"
+                                className="h-6"
                             />
                         </div>
                     </a>
