@@ -8,7 +8,7 @@ const pricingData = [
     "Transform data with recipes",
     "Upload to CKAN datastores",
     "Interactive data table view",
-    "Early access to Configurator",
+    "Experimental Configurator GUI",
 ];
 
 export const Pricing = () => {
@@ -117,7 +117,7 @@ export const Pricing = () => {
                                         </div>
                                     </div>
                                     <p className="mt-8 mb-8 2xl:mb-12 text-gray-500 leading-loose text-left">
-                                        1 license key + 7 days free trial
+                                        1 license key
                                     </p>
                                     <ul className="mb-14 text-white">
                                         {pricingData
@@ -145,7 +145,7 @@ export const Pricing = () => {
                                         target="_blank"
                                     >
                                         <div className="inline-block text-center py-2 px-4 w-full custom-button-colored leading-loose transition duration-200 mt-20">
-                                            Start Your 7-Day Free Trial
+                                            Purchase a License Key
                                         </div>
                                     </a>
                                 </div>

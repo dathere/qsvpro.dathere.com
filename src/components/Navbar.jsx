@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import datHereLogo from "../assets/logos/datHereLogo.png";
-import { GithubIcon } from "../assets/icons/GithubIcon";
+import qsvProLogo from "../assets/logos/qsv-pro-logo.png";
 
 const navbarLinks = [
     { label: "Home", href: "#home", ariaLabel: "Home" },
@@ -26,16 +26,21 @@ export const Navbar = () => {
                 >
                     <a className="navbar-link" href="#home" aria-label="Home">
                         <div className="flex justify-start items-center grow basis-0">
-                            <div className="text-white mr-2 text-6xl">
+                            {/* <div className="text-white mr-2 text-6xl">
                                 <img
                                     src={datHereLogo}
                                     alt="datHere logo"
                                     className="w-6 h-6"
                                 />
-                            </div>
-                            <div className="text-white font-['Inter'] font-bold text-xl">
+                            </div> */}
+                            {/* <div className="text-white font-['Inter'] font-bold text-xl">
                                 qsv pro
-                            </div>
+                            </div> */}
+                            <img
+                                src={qsvProLogo}
+                                alt="qsv pro logo"
+                                className="w-24 h-6"
+                            />
                         </div>
                     </a>
                 </motion.div>
@@ -72,7 +77,6 @@ export const Navbar = () => {
                             target="_blank"
                             aria-label="source code"
                         >
-                            <GithubIcon />
                             <span className="pt-px">Download</span>
                         </a>
                     </div>
@@ -117,7 +121,6 @@ export const Navbar = () => {
                                 href="https://github.com/dathere/qsv-pro-releases/releases/latest"
                                 target="_blank"
                             >
-                                <GithubIcon />
                                 Download
                             </a>
                         </div>

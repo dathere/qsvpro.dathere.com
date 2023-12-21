@@ -38,8 +38,7 @@ export const Features2 = () => (
                             >
                                 CKAN
                             </a>{" "}
-                            datastore & a data dictionary to specify file
-                            metadata.
+                            datastore to specify file metadata.
                         </p>
                         <ul className="mb-6 text-white">
                             <li className="mb-4 flex">
@@ -49,6 +48,9 @@ export const Features2 = () => (
                             <li className="mb-4 flex">
                                 <CheckArrowIcon />
                                 <span>In-app data dictionary form</span>
+                                <span className="ml-2 text-red-300">
+                                    (experimental)
+                                </span>
                             </li>
                             <li className="mb-4 flex">
                                 <CheckArrowIcon />

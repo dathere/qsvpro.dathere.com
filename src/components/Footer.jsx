@@ -5,23 +5,43 @@ import { TwitterIcon } from "../assets/icons/TwitterIcon";
 
 const footerData = [
     {
-        title: "Products",
-        items: ["Services", "About Us", "News and Stories", "Roadmap"],
+        title: "qsv pro",
+        items: [
+            {
+                label: "Download",
+                href: "https://github.com/dathere/qsv-pro-releases/releases",
+            },
+            {
+                label: "Purchase a license key",
+                href: "https://store.dathere.com/checkout/buy/41f919fd-2b68-40ea-a5ed-0f531b2efba5",
+            },
+            {
+                label: "Feedback form",
+                href: "https://dathere.com/qsv-feedback-form/",
+            },
+        ],
     },
     {
         title: "Important Links",
         items: [
-            "Organization Team",
-            "Our Journeys",
-            "Pricing Plans",
-            "Roadmap",
-            "Terms & Conditions",
-            "Privacy Policy",
+            { label: "Terms & Conditions", href: "#" },
+            { label: "Privacy Policy", href: "#" },
         ],
     },
     {
         title: "Company",
-        items: ["About Us", "Jobs", "Press", "Contact Us"],
+        items: [
+            { label: "About Us", href: "https://dathere.com" },
+            { label: "Contact Us", href: "https://dathere.com/contact" },
+            {
+                label: "Terms and Conditions",
+                href: "https://dathere.com/terms-and-conditions/",
+            },
+            {
+                label: "Privacy Policy",
+                href: "https://dathere.com/privacy-policy/",
+            },
+        ],
     },
 ];
 
@@ -59,25 +79,25 @@ export const Footer = () => {
                                 </a>
                             </div> */}
                         </div>
-                        <div className="w-full lg:w-2/3  lg:pl-16 hidden lg:flex flex-wrap justify-between">
-                            {/* <div className="w-full md:w-1/3 lg:w-auto mb-16 md:mb-0">
+                        <div className="w-full lg:w-2/3 lg:pl-16 lg:flex flex-wrap justify-between mb-4">
+                            <div className="w-full md:w-1/3 lg:w-auto mb-16 md:mb-0">
                                 <h3 className="mb-6 text-2xl font-bold text-white">
-                                    Products
+                                    qsv pro
                                 </h3>
                                 <ul>
                                     {footerData[0].items.map((item, i) => (
                                         <li key={i} className="mb-4">
                                             <a
                                                 className="text-gray-400 hover:text-gray-300"
-                                                href="#"
-                                                aria-label=""
+                                                href={item.href}
+                                                target="_blank"
                                             >
-                                                {item}
+                                                {item.label}
                                             </a>
                                         </li>
                                     ))}
                                 </ul>
-                            </div> */}
+                            </div>
                             {/* <div className="w-full md:w-1/3 lg:w-auto mb-16 md:mb-0">
                                 <h3 className="mb-6 text-2xl font-bold text-white">
                                     Important Links
@@ -96,7 +116,7 @@ export const Footer = () => {
                                     ))}
                                 </ul>
                             </div> */}
-                            {/* <div className="w-full md:w-1/3 lg:w-auto">
+                            <div className="w-full md:w-1/3 lg:w-auto">
                                 <h3 className="mb-6 text-2xl font-bold text-white">
                                     Company
                                 </h3>
@@ -105,19 +125,36 @@ export const Footer = () => {
                                         <li key={i} className="mb-4">
                                             <a
                                                 className="text-gray-400 hover:text-gray-300"
-                                                href="#"
-                                                aria-label=""
+                                                href={item.href}
+                                                target="_blank"
                                             >
-                                                {item}
+                                                {item.label}
                                             </a>
                                         </li>
                                     ))}
                                 </ul>
-                            </div> */}
+                            </div>
                         </div>
                     </div>
                     <p className="lg:text-center text-sm text-gray-400 border-t border-[rgb(255,255,255,0.2)] pt-4 hidden lg:block">
-                        &copy; 2023 datHere Inc.
+                        &copy; 2023 datHere Inc. By using qsv pro and/or this
+                        site, you agree to our{" "}
+                        <a
+                            href="https://dathere.com/terms-and-conditions/"
+                            className="underline text-gray-400 hover:text-gray-300"
+                            target="_blank"
+                        >
+                            Terms and Conditions
+                        </a>{" "}
+                        and{" "}
+                        <a
+                            href="https://dathere.com/privacy-policy/"
+                            className="underline text-gray-400 hover:text-gray-300"
+                            target="_blank"
+                        >
+                            Privacy Policy
+                        </a>
+                        .
                     </p>
                 </div>
             </div>

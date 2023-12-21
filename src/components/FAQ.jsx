@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import ckanUrlLocation from "../assets/images/faq/ckan-url-location.png";
+import generateCkanApiKey from "../assets/images/faq/generate-ckan-api-key.png";
+import ckanApiKeyLocation from "../assets/images/faq/ckan-api-key-location.png";
 
 const FAQData = [
     {
@@ -8,11 +11,56 @@ const FAQData = [
     },
     {
         question: "How do I get qsv pro?",
-        answer: "qsv pro is currently in beta. You can get beta access by purchasing a subscription to qsv pro on our store. You will receive an email with a download link to qsv pro after purchasing a subscription, or you may click the Download button on this page's navigation bar to download qsv pro (license key still required).",
+        answer: "qsv pro is currently in preview. You may download the latest version of qsv pro with a 7-day free trial. During or after the trial, you may purchase a license to continue using qsv pro.",
+        links: [
+            {
+                label: "Download qsv pro",
+                url: "https://github.com/dathere/qsv-pro/releases/latest",
+            },
+            {
+                label: "Purchase a license",
+                url: "https://store.dathere.com/checkout/buy/41f919fd-2b68-40ea-a5ed-0f531b2efba5",
+            },
+        ],
     },
     {
         question: "Where can I provide feedback?",
-        answer: "There is a feedback button in the top right corner of qsv pro. You may also email us at dathere.com/contact.",
+        answer: "There is a feedback button in the top right corner of qsv pro. You may also contact us with the links in the footer.",
+    },
+    {
+        question:
+            "Where can I find my CKAN dataset's URL that I want to upload my data to?",
+        answer: "Your CKAN dataset's URL is the URL of your CKAN instance (e.g. https://demo.ckan.org) followed by /dataset/ and the dataset's ID (for example: https://demo.ckan.org/dataset/sample-dataset).",
+        screenshots: [
+            {
+                src: ckanUrlLocation,
+                alt: "Example of CKAN dataset URL location",
+            },
+        ],
+    },
+    {
+        question: "Where can I generate a CKAN API key?",
+        answer: "You can generate a CKAN API key by logging into your CKAN account, clicking on the user settings gear icon on the top right corner, and clicking 'Regenerate API Key' on the bottom right corner of the page. Then when you click on your username on the top right corner, you will see your API key on the bottom left corner of the page.",
+        screenshots: [
+            {
+                src: generateCkanApiKey,
+                alt: "Example of CKAN API key generation on user's settings page",
+            },
+            {
+                src: ckanApiKeyLocation,
+                alt: "Example of CKAN API key location on user's profile page",
+            },
+        ],
+    },
+    {
+        question: "Where can I manage my billing information?",
+        answer: "You may manage your billing information at store.dathere.com/billing.",
+        links: [
+            {
+                label: "Manage billing information",
+                url: "https://store.dathere.com/billing",
+            },
+        ],
     },
 ];
 
@@ -38,6 +86,8 @@ export const FAQ = () => (
                             <div key={index} className="w-full p-1">
                                 <FAQBox
                                     title={item.question}
+                                    links={item.links}
+                                    screenshots={item.screenshots}
                                     content={item.answer}
                                     key={`${item.question}-${item.answer}`}
                                     defaultOpen={index === 0}
@@ -51,7 +101,7 @@ export const FAQ = () => (
     </section>
 );
 
-const FAQBox = ({ defaultOpen, title, content }) => {
+const FAQBox = ({ defaultOpen, title, links, screenshots, content }) => {
     const [isOpen, setIsOpen] = useState(defaultOpen);
 
     return (
@@ -70,6 +120,55 @@ const FAQBox = ({ defaultOpen, title, content }) => {
                 >
                     {content}
                 </p>
+
+                {/* Links as buttons with link.url and link.label */}
+                {links && links.length > 0 && (
+                    <div
+                        className={`transition-all duration-500 my-2 ${
+                            isOpen ? "block" : "hidden"
+                        }`}
+                    >
+                        <div className="flex flex-wrap -m-1 space-x-2">
+                            {links.map((link, index) => (
+                                <div
+                                    key={index}
+                                    className="w-fit mt-1 py-1 px-2 border rounded border-blue-300"
+                                >
+                                    <a
+                                        href={link.url}
+                                        className="text-blue-300 hover:text-blue-200"
+                                        target="_blank"
+                                    >
+                                        {link.label}
+                                    </a>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                )}
+
+                {screenshots && screenshots.length > 0 && (
+                    <div
+                        className={`transition-all duration-500 my-2 ${
+                            isOpen ? "block" : "hidden"
+                        }`}
+                    >
+                        <div className="flex flex-wrap -m-1">
+                            {screenshots.map((screenshot, index) => (
+                                <div
+                                    key={index}
+                                    className="w-full p-1 space-y-2"
+                                >
+                                    <img
+                                        src={screenshot.src}
+                                        alt={screenshot.alt}
+                                        className="rounded-xl"
+                                    />
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                )}
             </div>
             <div className="absolute top-6 right-4 sm:top-8 sm:right-8">
                 <svg
