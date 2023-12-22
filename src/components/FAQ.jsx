@@ -10,8 +10,28 @@ const FAQData = [
         answer: "qsv pro is a desktop application that allows you to run qsv commands with a graphical user interface based on the qsv CLI tool. It also features a suite of recipes (scripts) for common data wrangling tasks to perform on your spreadsheet, including sorting rows, removing duplicate rows, and removing Personally Identifiable Information (PII).",
     },
     {
+        question: 'What does "preview" mean?',
+        answer: "qsv pro is currently in preview, which means that it may contain bugs and does not include all of the features that are planned in a stable release. If you encounter any bugs or have any feature/feedback requests, you may contact us with our feedback form.",
+        links: [
+            {
+                label: "Feedback form",
+                url: "https://dathere.com/qsv-feedback-form/",
+            },
+        ],
+    },
+    {
+        question: 'What does "experimental" mean?',
+        answer: "qsv pro may include experimental features that may not be fully functional/tested or may not be included in a stable release. If you encounter any bugs or have any feature/feedback requests, you may contact us with our feedback form.",
+        links: [
+            {
+                label: "Feedback form",
+                url: "https://dathere.com/qsv-feedback-form/",
+            },
+        ],
+    },
+    {
         question: "How do I get qsv pro?",
-        answer: "qsv pro is currently in preview. You may download the latest version of qsv pro with a 7-day free trial. During or after the trial, you may purchase a license to continue using qsv pro.",
+        answer: "You may download the latest version of qsv pro with a 7-day free trial. During or after the trial, you may purchase a license to continue using qsv pro. You may choose between any of the installers for Windows (.msi, -setup.exe), macOS (.app, .dmg), and Linux (.AppImage, .deb).",
         links: [
             {
                 label: "Download qsv pro",

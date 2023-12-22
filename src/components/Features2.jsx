@@ -47,7 +47,7 @@ export const Features2 = () => (
                             </li>
                             <li className="mb-4 flex">
                                 <CheckArrowIcon />
-                                <span>In-app data dictionary form</span>
+                                In-app data dictionary form
                                 <span className="ml-2 text-red-300">
                                     (experimental)
                                 </span>

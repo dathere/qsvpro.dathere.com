@@ -8,7 +8,7 @@ const pricingData = [
     "Transform data with recipes",
     "Upload to CKAN datastores",
     "Interactive data table view",
-    "Experimental Configurator GUI",
+    "Configurator GUI (experimental)",
 ];
 
 export const Pricing = () => {
@@ -131,7 +131,15 @@ export const Pricing = () => {
                                                     className="mb-4 flex"
                                                     key={`${text}-${index}`}
                                                 >
-                                                    <CheckArrowIcon />
+                                                    <CheckArrowIcon
+                                                        fillColor={
+                                                            text.includes(
+                                                                "(experimental)"
+                                                            )
+                                                                ? "fill-red-300"
+                                                                : ""
+                                                        }
+                                                    />
                                                     <span>{text}</span>
                                                 </li>
                                             ))}

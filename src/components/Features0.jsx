@@ -40,8 +40,15 @@ export const Features0 = () => {
                                 <li className="mb-4 flex">
                                     <CheckArrowIcon />
                                     <span>
-                                        File formats: .csv, .tsv, .tab, .xlsx,
-                                        .xls, .ods, .xlsm, .xlsb
+                                        File formats: .csv, .xlsx,{" "}
+                                        <span className="text-red-300">
+                                            .tsv, .tab, .xls, .ods, .xlsm, .xlsb
+                                        </span>
+                                        <br />
+                                        <span className="text-red-300">
+                                            *Experimental file formats, may not
+                                            work as expected.
+                                        </span>
                                     </span>
                                 </li>
                                 <li className="mb-4 flex">

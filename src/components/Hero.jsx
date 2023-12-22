@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 
 import dashboard from "../assets/images/dashboard.png";
 import qsvProLogo from "../assets/logos/qsv-pro-logo.png";
+import Download from "../assets/icons/Download";
 
 export const Hero = () => {
     return (
@@ -25,13 +26,16 @@ export const Hero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.05 }}
                 >
-                    <div className="text-5xl sm:text-6xl lg:text-7xl xl:text-7xl font-bold tracking-wide text-white px-8 sm:px-8 md:px-20 lg:px-4">
+                    <div className="flex justify-center items-center ml-20">
                         {/* <span>qsv pro</span> */}
                         <img
                             src={qsvProLogo}
                             alt="qsv pro logo"
                             className="w-72 sm:w-96 lg:w-120"
                         />
+                        <p className="text-white ml-1 font-['Inter'] text-xl mt-2 h-fit w-fit">
+                            (preview)
+                        </p>
                     </div>
                 </motion.div>
                 <motion.div
@@ -65,15 +69,23 @@ export const Hero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.15 }}
                 >
-                    <div className="flex flex-col gap-2 sm:flex-row mt-14 mb-24 sm:mb-40 justify-center">
+                    <div className="grid grid-cols-1 place-items-center gap-2 sm:flex-row mt-14 mb-24 sm:mb-40 justify-center">
                         <a
                             href="https://github.com/dathere/qsv-pro-releases/releases/latest"
                             target="_blank"
                         >
-                            <div className="custom-button-colored w-64 h-12 mr-0 sm:mr-4 lg:mr-6 mb-2 sm:mb-0">
-                                Start Your 7-Day Free Trial
+                            <div className="custom-button-colored w-64 h-12 mb-2 sm:mb-0">
+                                <Download />
+                                <span className="ml-1 text-lg">
+                                    Download qsv pro
+                                </span>
                             </div>
                         </a>
+
+                        <p className="text-white text-sm sm:text-base text-center mx-auto">
+                            Start your 7-day free trial,{" "}
+                            <u>no payment required</u>.
+                        </p>
                         {/* <div
                             className="w-64 sm:w-52 h-12 rounded-xl font-bold text-white border border-solid  flex justify-center items-center cursor-pointer bg-customDarkBg2 hover:bg-customDarkBg3 border-customPrimary transition"
                         >
