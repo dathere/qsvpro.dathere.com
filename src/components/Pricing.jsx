@@ -37,6 +37,8 @@ export const Pricing = () => {
                                 Choose your plan
                             </h2>
                             <p className="mb-6 text-customGrayText">
+                                After you complete your 7-day free trial, you'll
+                                need a license key to continue using qsv pro.
                                 Select the subscription plan that suits your
                                 needs and benefit from qsv pro.
                             </p>

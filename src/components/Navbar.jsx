@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-import datHereLogo from "../assets/logos/datHereLogo.png";
 import qsvProLogo from "../assets/logos/qsv-pro-logo.png";
 
 const navbarLinks = [

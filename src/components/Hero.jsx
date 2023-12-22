@@ -26,7 +26,7 @@ export const Hero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.05 }}
                 >
-                    <div className="flex justify-center items-center ml-20">
+                    <div className="grid grid-cols-1 sm:flex sm:ml-20 place-items-center justify-center items-center">
                         {/* <span>qsv pro</span> */}
                         <img
                             src={qsvProLogo}
