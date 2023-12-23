@@ -82,6 +82,10 @@ const FAQData = [
             },
         ],
     },
+    {
+        question: "Is there a light theme?",
+        answer: "Yes, you may change the theme with the sun/moon icon on the top right of qsv pro.",
+    },
 ];
 
 export const FAQ = () => (
