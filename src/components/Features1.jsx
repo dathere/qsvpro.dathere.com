@@ -29,7 +29,7 @@ export const Features1 = () => {
                             <ul className="mb-6 text-white">
                                 <li className="mb-4 flex">
                                     <CheckArrowIcon />
-                                    <span>Sort rows</span>
+                                    <span>Sort in lexicographical order</span>
                                 </li>
                                 <li className="mb-4 flex">
                                     <CheckArrowIcon />
@@ -38,7 +38,7 @@ export const Features1 = () => {
                                 <li className="mb-4 flex">
                                     <CheckArrowIcon />
                                     <span>
-                                        Remove Personally Identifiable
+                                        Remove rows with Personally Identifiable
                                         Information (PII)
                                     </span>
                                 </li>
