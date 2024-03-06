@@ -1,37 +1,35 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import ckanUrlLocation from "../assets/images/faq/ckan-url-location.png";
-import generateCkanApiKey from "../assets/images/faq/generate-ckan-api-key.png";
-import ckanApiKeyLocation from "../assets/images/faq/ckan-api-key-location.png";
+import generateCkanApiToken from "../assets/images/faq/generate-ckan-api-token.png";
 
 const FAQData = [
     {
         question: "What is qsv pro?",
-        answer: "qsv pro is a desktop application that allows you to run qsv commands with a graphical user interface based on the qsv CLI tool. It also features a suite of recipes (scripts) for common data wrangling tasks to perform on your spreadsheet, including sorting rows, removing duplicate rows, and removing Personally Identifiable Information (PII).",
+        answer: "qsv pro is a spreadsheet data wrangling desktop application to view, transform, and upload data to CKAN with a graphical user interface based on the qsv CLI tool. It features a suite of recipes (scripts) for common data wrangling tasks to perform on your spreadsheet, including sorting rows, removing duplicate rows, and removing Personally Identifiable Information (PII).",
     },
     {
         question: 'What does "preview" mean?',
-        answer: "qsv pro is currently in preview, which means that it may contain bugs and does not include all of the features that are planned in a stable release. If you encounter any bugs or have any feature/feedback requests, you may contact us with our feedback form.",
+        answer: "qsv pro is currently in preview, which means that it may contain bugs and does not include all of the features that are planned in a stable release (features may also be removed). If you encounter any bugs or have any feature/feedback requests, you may contact us on our support site by creating a ticket.",
         links: [
             {
-                label: "Feedback form",
-                url: "https://dathere.com/qsv-feedback-form/",
+                label: "Support site",
+                url: "https://support.dathere.com",
             },
         ],
     },
     {
         question: 'What does "experimental" mean?',
-        answer: "qsv pro may include experimental features that may not be fully functional/tested or may not be included in a stable release. If you encounter any bugs or have any feature/feedback requests, you may contact us with our feedback form.",
+        answer: "qsv pro may include experimental features that may not be fully functional/tested or may not be included in a stable release. If you encounter any bugs or have any feature/feedback requests, you may contact us on our support site by creating a ticket.",
         links: [
             {
-                label: "Feedback form",
-                url: "https://dathere.com/qsv-feedback-form/",
+                label: "Support site",
+                url: "https://support.dathere.com",
             },
         ],
     },
     {
         question: "How do I get qsv pro?",
-        answer: "You may download the latest version of qsv pro with a 7-day free trial. During or after the trial, you may purchase a license to continue using qsv pro. You may choose between any of the installers for Windows (.msi, -setup.exe), macOS (.app, .dmg), and Linux (.AppImage, .deb).",
+        answer: "You may download the latest version of qsv pro with a 7-day free trial (no payment method required). During or after the trial, you may purchase a license to continue using qsv pro. You may choose between any of the installers for Windows (.msi, -setup.exe), macOS (.app, .dmg), and Linux (.AppImage, .deb).",
         links: [
             {
                 label: "Download qsv pro",
@@ -45,30 +43,21 @@ const FAQData = [
     },
     {
         question: "Where can I provide feedback?",
-        answer: "There is a feedback button in the top right corner of qsv pro. You may also contact us with the links in the footer.",
-    },
-    {
-        question:
-            "Where can I find my CKAN dataset's URL that I want to upload my data to?",
-        answer: "Your CKAN dataset's URL is the URL of your CKAN instance (e.g. https://demo.ckan.org) followed by /dataset/ and the dataset's ID (for example: https://demo.ckan.org/dataset/sample-dataset).",
-        screenshots: [
+        answer: "You may provide feedback on our support site by creating a ticket.",
+        links: [
             {
-                src: ckanUrlLocation,
-                alt: "Example of CKAN dataset URL location",
+                label: "Support site",
+                url: "https://support.dathere.com",
             },
         ],
     },
     {
-        question: "Where can I generate a CKAN API key?",
-        answer: "You can generate a CKAN API key by logging into your CKAN account, clicking on the user settings gear icon on the top right corner, and clicking 'Regenerate API Key' on the bottom right corner of the page. Then when you click on your username on the top right corner, you will see your API key on the bottom left corner of the page.",
+        question: "Where can I generate a CKAN API token?",
+        answer: "You may generate a CKAN API token by logging into your CKAN account on your CKAN instance. Then, click on the user profile icon on the top right corner, click the 'API Tokens' tab, enter any name for your token and click the 'Create API Token' button, and then your API token will appear on the page. Note that you may not view your API token from qsv pro, so we recommend saving this token somewhere safe.",
         screenshots: [
             {
-                src: generateCkanApiKey,
-                alt: "Example of CKAN API key generation on user's settings page",
-            },
-            {
-                src: ckanApiKeyLocation,
-                alt: "Example of CKAN API key location on user's profile page",
+                src: generateCkanApiToken,
+                alt: "Example of CKAN API token generation on user's profile page",
             },
         ],
     },

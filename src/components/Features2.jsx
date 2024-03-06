@@ -26,7 +26,7 @@ export const Features2 = () => (
                             Load to CKAN with ease
                         </span>
                         <h2 className="mt-6 mb-8 text-4xl lg:text-5xl custom-block-big-title">
-                            Upload your data to a <u>CKAN</u> datastore
+                            Upload your data to a <u>CKAN</u> instance
                         </h2>
                         <p className="mb-12 text-customGrayText leading-loose">
                             qsv pro allows you to upload your transformed data
@@ -38,7 +38,8 @@ export const Features2 = () => (
                             >
                                 CKAN
                             </a>{" "}
-                            datastore to specify file metadata.
+                            instance within an organization and dataset as a
+                            resource.
                         </p>
                         <ul className="mb-6 text-white">
                             <li className="mb-4 flex">
@@ -47,14 +48,15 @@ export const Features2 = () => (
                             </li>
                             <li className="mb-4 flex">
                                 <CheckArrowIcon />
-                                In-app data dictionary form
-                                <span className="ml-2 text-red-300">
-                                    (experimental)
-                                </span>
+                                Search through organizations, datasets, and
+                                resources
                             </li>
                             <li className="mb-4 flex">
                                 <CheckArrowIcon />
-                                <span>Automatically inferred data types</span>
+                                <span>
+                                    Create a new resource or overwrite existing
+                                    resources
+                                </span>
                             </li>
                         </ul>
                     </div>

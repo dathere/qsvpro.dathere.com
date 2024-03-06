@@ -6,7 +6,7 @@ import { CheckArrowIcon } from "../assets/icons/CheckArrowIcon";
 const pricingData = [
     "Import local spreadsheet data",
     "Transform data with recipes",
-    "Upload to CKAN datastores",
+    "Upload to CKAN instances",
     "Interactive data table view",
     "Configurator GUI (experimental)",
 ];
