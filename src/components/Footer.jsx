@@ -16,8 +16,8 @@ const footerData = [
                 href: "https://store.dathere.com/checkout/buy/41f919fd-2b68-40ea-a5ed-0f531b2efba5",
             },
             {
-                label: "Feedback form",
-                href: "https://dathere.com/qsv-feedback-form/",
+                label: "Create a support ticket",
+                href: "https://support.dathere.com",
             },
         ],
     },
