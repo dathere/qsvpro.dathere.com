@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 import qsvProLogo from "../assets/logos/qsv-pro-logo.png";
 
@@ -9,11 +8,14 @@ const navbarLinks = [
     // { label: "Feedback", href: "#feedback", ariaLabel: "Feedback" },
     { label: "Pricing", href: "#pricing", ariaLabel: "Pricing" },
     { label: "FAQ", href: "#FAQ", ariaLabel: "FAQ" },
+    {
+        label: "Support",
+        href: "https://support.dathere.com",
+        ariaLabel: "Support",
+    },
 ];
 
 export const Navbar = () => {
-    const [isOpen, setIsOpen] = useState(false);
-
     return (
         <nav className="w-full h-20 flex flex-col justify-center items-center fixed bg-customDarkBg1 lg:bg-customDarkBgTransparent z-40 lg:backdrop-blur-xl">
             <div className="2xl:w-[1280px] xl:w-10/12 w-11/12 flex justify-between items-center relative">
