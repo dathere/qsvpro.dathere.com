@@ -1,11 +1,70 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 import dashboard from "../assets/images/dashboard.png";
 import qsvProLogo from "../assets/logos/qsv-pro-logo.png";
-import Download from "../assets/icons/Download";
+import Download from "../assets/icons/Download.jsx";
 
 export const Hero = () => {
+    const [downloadData, setDownloadData] = useState();
+    const [OS, setOS] = useState();
+    const [name, setName] = useState();
+    useEffect(() => {
+        (async () => {
+            const userAgent = window.navigator.userAgent;
+            // Ignore mobile view for now
+            if (
+                userAgent.includes("iPhone") ||
+                userAgent.includes("Android") ||
+                userAgent.includes("iPad")
+            ) {
+                setOS("unknown");
+                return;
+            }
+            try {
+                const data = await (
+                    await fetch(
+                        "https://api.github.com/repos/dathere/qsv-pro-releases/releases"
+                    )
+                ).json();
+                const name = data[0].name;
+                setName(name);
+                const version = name.slice(1);
+                const downloadData = {
+                    windows: [
+                        `qsv.pro_${version}_x64_en-US.msi`,
+                        `qsv.pro_${version}_x64-setup.exe`,
+                    ],
+                    macos: [
+                        `qsv.pro_x64.app.tar.gz`,
+                        `qsv.pro_aarch64.app.tar.gz`,
+                        `qsv.pro_${version}_x64.dmg`,
+                        `qsv.pro_${version}_aarch64.dmg`,
+                    ],
+                    linux: [
+                        `qsv-pro_${version}_amd64.AppImage`,
+                        `qsv-pro_${version}_amd64.deb`,
+                    ],
+                };
+                setDownloadData(downloadData);
+
+                if (userAgent.includes("Windows")) {
+                    setOS("windows");
+                } else if (userAgent.includes("Macintosh")) {
+                    setOS("macos");
+                } else if (userAgent.includes("Linux")) {
+                    setOS("linux");
+                }
+            } catch (e) {
+                console.error(
+                    "Unable to fetch API data from releases repository: " +
+                        String(e)
+                );
+                console.log("Showing default download button to user.");
+            }
+        })();
+    }, []);
+
     return (
         <section
             className="w-screen  flex justify-center items-center bg-customDarkBg1 mb-[28vw] md:mb-[18vw] lg:mb-[10vw] xl:mb-[13vw] 2xl:mb-60 hero-bg-gradient pb-24 sm:pb-32 md:pb-44 lg:pb-0"
@@ -70,22 +129,69 @@ export const Hero = () => {
                     transition={{ duration: 0.5, delay: 0.15 }}
                 >
                     <div className="grid grid-cols-1 place-items-center gap-2 sm:flex-row mt-14 mb-24 sm:mb-40 justify-center">
-                        <a
-                            href="https://github.com/dathere/qsv-pro-releases/releases/latest"
-                            target="_blank"
-                        >
-                            <div className="custom-button-colored w-64 h-12 mb-2 sm:mb-0">
-                                <Download />
-                                <span className="ml-1 text-lg">
-                                    Download qsv pro
-                                </span>
-                            </div>
-                        </a>
-
-                        <p className="text-white text-sm sm:text-base text-center mx-auto">
-                            Start your 7-day free trial,{" "}
-                            <u>no payment required</u>.
-                        </p>
+                        {downloadData && OS !== "unknown" ? (
+                            <>
+                                <p className="text-white text-md text-center mx-auto mb-4">
+                                    Start your 7-day free trial,{" "}
+                                    <u>no payment required</u>.
+                                </p>
+                                <div className="flex justify-center">
+                                    {Object.keys(downloadData).map(
+                                        (platform) => (
+                                            <div
+                                                key={platform}
+                                                className={`mx-4 ${
+                                                    platform === OS
+                                                        ? "text-xl font-bold"
+                                                        : ""
+                                                }`}
+                                            >
+                                                <p>
+                                                    {platform === "macos"
+                                                        ? "macOS"
+                                                        : platform[0].toUpperCase() +
+                                                          platform.slice(1)}
+                                                </p>
+                                                {downloadData[platform].map(
+                                                    (download, index) => (
+                                                        <a
+                                                            key={index}
+                                                            href={`https://github.com/dathere/qsv-pro-releases/releases/download/${name}/${download}`} // Replace with actual download path
+                                                            className={`block text-white font-bold py-2 px-4 rounded mt-4 ${
+                                                                platform === OS
+                                                                    ? " bg-teal-500 hover:bg-teal-700"
+                                                                    : " bg-blue-500 hover:bg-blue-700"
+                                                            }`}
+                                                            download
+                                                        >
+                                                            {download}
+                                                        </a>
+                                                    )
+                                                )}
+                                            </div>
+                                        )
+                                    )}
+                                </div>
+                            </>
+                        ) : (
+                            <>
+                                <a
+                                    href="https://github.com/dathere/qsv-pro-releases/releases/latest"
+                                    target="_blank"
+                                >
+                                    <div className="custom-button-colored w-64 h-12 mb-2 sm:mb-0">
+                                        <Download />
+                                        <span className="ml-1 text-lg">
+                                            Download qsv pro
+                                        </span>
+                                    </div>
+                                </a>
+                                <p className="text-white text-sm sm:text-base text-center mx-auto">
+                                    Start your 7-day free trial,{" "}
+                                    <u>no payment required</u>.
+                                </p>
+                            </>
+                        )}
                         {/* <div
                             className="w-64 sm:w-52 h-12 rounded-xl font-bold text-white border border-solid  flex justify-center items-center cursor-pointer bg-customDarkBg2 hover:bg-customDarkBg3 border-customPrimary transition"
                         >
