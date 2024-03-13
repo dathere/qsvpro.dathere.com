@@ -24,8 +24,7 @@ jobs:
             - name: Install, build, and upload your site
               uses: withastro/action@v2
               with:
-                  path: .
-                  package-manager: bun # The Node package manager that should be used to install dependencies and build your site. Automatically detected based on your lockfile. (optional)
+                  package-manager: bun
 
     deploy:
         needs: build
