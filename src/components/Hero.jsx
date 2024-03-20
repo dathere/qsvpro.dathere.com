@@ -142,8 +142,8 @@ export const Hero = () => {
                                                 key={platform}
                                                 className={`mx-4 ${
                                                     platform === OS
-                                                        ? "text-xl font-bold"
-                                                        : ""
+                                                        ? "text-white text-xl font-bold"
+                                                        : "text-white"
                                                 }`}
                                             >
                                                 <p>
