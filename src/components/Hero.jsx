@@ -152,6 +152,15 @@ export const Hero = () => {
                                                         : platform[0].toUpperCase() +
                                                           platform.slice(1)}
                                                 </p>
+                                                {downloadData &&
+                                                    platform === "windows" && (
+                                                        <small className="text-xs text-zinc-300 mt-4">
+                                                            You may get an
+                                                            antivirus
+                                                            notification that
+                                                            you have to skip.
+                                                        </small>
+                                                    )}
                                                 {downloadData[platform].map(
                                                     (download, index) => (
                                                         <a
