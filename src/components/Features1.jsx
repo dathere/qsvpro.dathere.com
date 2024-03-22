@@ -45,7 +45,7 @@ export const Features1 = () => {
                             </ul>
                         </div>
                     </div>
-                    <div className="w-full md:w-1/2 mb-8 md:mb-0 mx-auto lg:w-1/2 flex flex-wrap lg:-mx-4 sm:pr-8 justify-center">
+                    <div className="w-full md:w-3/4 mb-8 md:mb-0 mx-auto lg:w-1/2 flex flex-wrap lg:-mx-4 sm:pr-8 justify-center">
                         <img
                             src={recipedemo}
                             alt="Recipe Demo"

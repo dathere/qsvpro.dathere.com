@@ -12,7 +12,7 @@ export const Features2 = () => (
             transition={{ duration: 0.5, delay: 0.2 }}
         >
             <div className="flex flex-wrap items-center 2xl:w-[1450px] xl:w-[1300px] w-11/12 mx-auto md:pl-4 xl:pr-16 xl:pl-16">
-                <div className="w-full md:w-1/2 mb-8 md:mb-0 lg:pl-16 flex justify-center mx-auto pt-16 lg:pt-0">
+                <div className="w-full md:w-3/4 mb-8 md:mb-0 lg:pl-16 flex justify-center mx-auto pt-16 lg:pt-0">
                     <img
                         src={uploadtockan}
                         alt="CKAN Upload Demo"
@@ -23,7 +23,7 @@ export const Features2 = () => (
                 <div className="w-full lg:w-1/2 mb-12 lg:mb-0 xl:pl-8">
                     <div className="mx-auto lg:mx-auto w-11/12 sm:w-4/5 md:w-3/4 lg:w-unset">
                         <span className="custom-block-subtitle">
-                            Load to CKAN with ease
+                            Load to CKAN from your device
                         </span>
                         <h2 className="mt-6 mb-8 text-4xl lg:text-5xl custom-block-big-title">
                             Upload your data to a <u>CKAN</u> instance
