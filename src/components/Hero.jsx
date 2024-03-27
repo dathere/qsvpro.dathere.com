@@ -16,7 +16,8 @@ export const Hero = () => {
             if (
                 userAgent.includes("iPhone") ||
                 userAgent.includes("Android") ||
-                userAgent.includes("iPad")
+                userAgent.includes("iPad") ||
+                window.innerWidth < 768
             ) {
                 setOS("unknown");
                 return;
