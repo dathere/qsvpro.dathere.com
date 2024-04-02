@@ -44,7 +44,7 @@ export const Features2 = () => (
                         <ul className="mb-6 text-white">
                             <li className="mb-4 flex">
                                 <CheckArrowIcon />
-                                <span>Integrated with the CKAN API</span>
+                                <span>Integrated with the CKAN API <span className="text-red-300">(>= 2.9)</span></span>
                             </li>
                             <li className="mb-4 flex">
                                 <CheckArrowIcon />
