@@ -40,9 +40,9 @@ export const Navbar = () => {
                             <img
                                 src={qsvProLogo}
                                 alt="qsv pro logo"
-                                className="h-6"
+                                className="h-8"
                             />
-                            <small className="text-white ml-1 font-['Inter'] text-xs mb-1 rounded-full px-1 border">
+                            <small className="text-white font-['Inter'] text-xs mb-1 rounded-full px-1 border">
                                 preview
                             </small>
                         </div>

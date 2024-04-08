@@ -93,7 +93,7 @@ export const Hero = () => {
                             alt="qsv pro logo"
                             className="w-72 sm:w-96 lg:w-120"
                         />
-                        <p className="text-white ml-1 font-['Inter'] text-xl mt-2 h-fit w-fit">
+                        <p className="text-white font-['Inter'] text-xl mt-2 h-fit w-fit">
                             (preview)
                         </p>
                     </div>
