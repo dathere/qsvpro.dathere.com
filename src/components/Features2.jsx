@@ -12,7 +12,7 @@ export const Features2 = () => (
             transition={{ duration: 0.5, delay: 0.2 }}
         >
             <div className="flex flex-wrap items-center 2xl:w-[1450px] xl:w-[1300px] w-11/12 mx-auto md:pl-4 xl:pr-16 xl:pl-16">
-                <div className="w-full md:w-3/4 mb-8 md:mb-0 lg:pl-16 flex justify-center mx-auto pt-16 lg:pt-0">
+                <div className="w-full md:w-1/2 mb-8 md:mb-0 lg:pl-16 flex justify-center mx-auto pt-16 lg:pt-0">
                     <img
                         src={uploadtockan}
                         alt="CKAN Upload Demo"
@@ -44,7 +44,12 @@ export const Features2 = () => (
                         <ul className="mb-6 text-white">
                             <li className="mb-4 flex">
                                 <CheckArrowIcon />
-                                <span>Integrated with the CKAN API <span className="text-red-300">(>= 2.9)</span></span>
+                                <span>
+                                    Integrated with the CKAN API{" "}
+                                    <span className="text-red-300">
+                                        (>= 2.9)
+                                    </span>
+                                </span>
                             </li>
                             <li className="mb-4 flex">
                                 <CheckArrowIcon />
