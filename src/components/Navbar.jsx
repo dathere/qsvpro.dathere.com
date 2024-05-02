@@ -29,7 +29,7 @@ export const Navbar = () => {
                         <div className="flex justify-start items-center grow basis-0">
                             {/* <div className="text-white mr-2 text-6xl">
                                 <img
-                                    src={datHereLogo}
+                                    src={datHereLogo.src}
                                     alt="datHere logo"
                                     className="w-6 h-6"
                                 />
@@ -38,7 +38,7 @@ export const Navbar = () => {
                                 qsv pro
                             </div> */}
                             <img
-                                src={qsvProLogo}
+                                src={qsvProLogo.src}
                                 alt="qsv pro logo"
                                 className="h-8"
                             />

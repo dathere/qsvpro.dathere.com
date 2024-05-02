@@ -12,11 +12,11 @@ Astro, React, Tailwind, Framer Motion
 
 ## How to run
 
-All commands are run from the root of the project, from a terminal:
+All commands are run from the root of the project, from a terminal. We use [bun](https://bun.sh):
 
-| Command            | Action                                       |
-| :----------------- | :------------------------------------------- |
-| `pnpm install`     | Installs dependencies                        |
-| `pnpm run dev`     | Starts local dev server at `localhost:3000`  |
-| `pnpm run build`   | Build your production site to `./dist/`      |
-| `pnpm run preview` | Preview your build locally, before deploying |
+| Command         | Action                                       |
+| :-------------- | :------------------------------------------- |
+| `bun install`   | Installs dependencies                        |
+| `bun dev`       | Starts local dev server at `localhost:3000`  |
+| `bun run build` | Build your production site to `./dist/`      |
+| `bun preview`   | Preview your build locally, before deploying |

@@ -52,7 +52,7 @@ export const FeaturesDiagonal = () => {
                     </div>
                     <div className="w-4/5 lg:w-2/3 lg:pl-16 flex justify-center mx-auto pt-16 lg:pt-0">
                         <img
-                            src={configurator}
+                            src={configurator.src}
                             alt="Configurator Demo"
                             className="rounded-xl custom-border-gray"
                         />
