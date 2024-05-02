@@ -1,7 +1,4 @@
-import { FacebookIcon } from "../assets/icons/FacebookIcon";
-import { InstagramIcon } from "../assets/icons/InstagramIcon";
 import datHereLogoFull from "../assets/logos/datHere-logo-light.png";
-import { TwitterIcon } from "../assets/icons/TwitterIcon";
 
 const footerData = [
     {
@@ -18,6 +15,10 @@ const footerData = [
             {
                 label: "Create a support ticket",
                 href: "https://support.dathere.com",
+            },
+            {
+                label: "Request a demo",
+                href: "https://dathere.com/product-demo-request/",
             },
         ],
     },
@@ -64,20 +65,6 @@ export const Footer = () => {
                             <p className="mb-10 mt-4 sm:w-[22rem] lg:w-[20rem] xl:w-[24rem] text-gray-400 leading-loose text-center lg:text-left mx-auto lg:mx-0">
                                 Making data Useful, Usable, and Used.
                             </p>
-                            {/* <div className="w-36 mx-auto lg:mx-0">
-                                <a
-                                    className="inline-block w-10  h-10 mr-2 p-2 bg-customDarkBg2 custom-border-gray  hover:bg-gray-700 rounded-xl"
-                                    href="#"
-                                >
-                                    <TwitterIcon />
-                                </a>
-                                <a
-                                    className="inline-block w-10  h-10 mr-2 p-2 bg-customDarkBg2 custom-border-gray  hover:bg-gray-700 rounded-xl"
-                                    href="#"
-                                >
-                                    <InstagramIcon />
-                                </a>
-                            </div> */}
                         </div>
                         <div className="w-full lg:w-2/3 lg:pl-16 lg:flex flex-wrap justify-between mb-4">
                             <div className="w-full md:w-1/3 lg:w-auto mb-16 md:mb-0">
@@ -137,8 +124,8 @@ export const Footer = () => {
                         </div>
                     </div>
                     <p className="lg:text-center text-sm text-gray-400 border-t border-[rgb(255,255,255,0.2)] pt-4 hidden lg:block">
-                        &copy; 2023 datHere Inc. By using qsv pro and/or this
-                        site, you agree to our{" "}
+                        &copy; datHere Inc. By using qsv pro and/or this site,
+                        you agree to our{" "}
                         <a
                             href="https://dathere.com/terms-and-conditions/"
                             className="underline text-gray-400 hover:text-gray-300"

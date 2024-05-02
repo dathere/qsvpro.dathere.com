@@ -108,7 +108,7 @@ export const Pricing = () => {
                             <div className="w-[350px] sm:w-[380px] lg:w-1/3 px-4 mb-8 lg:mb-0">
                                 <div className="px-8 py-8 bg-customDarkBg3 rounded-3xl">
                                     <h4 className="mb-2 2xl:mb-4 text-2xl font-bold font-heading text-white text-left">
-                                        qsv pro
+                                        qsv pro (preview)
                                     </h4>
                                     <div className="flex justify-start items-end">
                                         <div className="text-4xl sm:text-5xl font-bold text-white text-left mt-4 mr-2">
@@ -122,29 +122,23 @@ export const Pricing = () => {
                                         1 license key
                                     </p>
                                     <ul className="mb-14 text-white">
-                                        {pricingData
-                                            .concat(
-                                                !isMonthly
-                                                    ? ["~$200 saved per year!"]
-                                                    : []
-                                            )
-                                            .map((text, index) => (
-                                                <li
-                                                    className="mb-4 flex"
-                                                    key={`${text}-${index}`}
-                                                >
-                                                    <CheckArrowIcon
-                                                        fillColor={
-                                                            text.includes(
-                                                                "(experimental)"
-                                                            )
-                                                                ? "fill-red-300"
-                                                                : ""
-                                                        }
-                                                    />
-                                                    <span>{text}</span>
-                                                </li>
-                                            ))}
+                                        {pricingData.map((text, index) => (
+                                            <li
+                                                className="mb-4 flex"
+                                                key={`${text}-${index}`}
+                                            >
+                                                <CheckArrowIcon
+                                                    fillColor={
+                                                        text.includes(
+                                                            "(experimental)"
+                                                        )
+                                                            ? "fill-red-300"
+                                                            : ""
+                                                    }
+                                                />
+                                                <span>{text}</span>
+                                            </li>
+                                        ))}
                                     </ul>
                                     <a
                                         href={
