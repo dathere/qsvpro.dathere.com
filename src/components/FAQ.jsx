@@ -92,7 +92,7 @@ export const FAQ = () => (
                         Have any questions?
                     </p>
                     <h2 className="mb-16 custom-block-big-title text-center">
-                        Frequently Asked Questions
+                        Questions and Answers
                     </h2>
                     <div className="mb-11 flex flex-wrap -m-1">
                         {FAQData.map((item, index) => (
