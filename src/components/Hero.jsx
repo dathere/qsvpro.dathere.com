@@ -33,18 +33,21 @@ export const Hero = () => {
                 const version = name.slice(1);
                 const downloadData = {
                     windows: [
-                        `qsv.pro_${version}_x64_en-US.msi`,
-                        `qsv.pro_${version}_x64-setup.exe`,
+                        ["Windows", `qsv.pro_${version}_x64_en-US.msi`],
+                        // `qsv.pro_${version}_x64-setup.exe`,
                     ],
                     macos: [
-                        `qsv.pro_x64.app.tar.gz`,
-                        `qsv.pro_aarch64.app.tar.gz`,
-                        `qsv.pro_${version}_x64.dmg`,
-                        `qsv.pro_${version}_aarch64.dmg`,
+                        ["macOS (Apple Silicon)", `qsv.pro_aarch64.app.tar.gz`],
+                        ["macOS (Intel)", `qsv.pro_x64.app.tar.gz`],
+                        // `qsv.pro_${version}_x64.dmg`,
+                        // `qsv.pro_${version}_aarch64.dmg`,
                     ],
                     linux: [
-                        `qsv-pro_${version}_amd64.AppImage`,
-                        `qsv-pro_${version}_amd64.deb`,
+                        [
+                            "Linux (AppImage)",
+                            `qsv-pro_${version}_amd64.AppImage`,
+                        ],
+                        // `qsv-pro_${version}_amd64.deb`,
                     ],
                 };
                 setDownloadData(downloadData);
@@ -147,34 +150,34 @@ export const Hero = () => {
                                                         : "text-white"
                                                 }`}
                                             >
-                                                <p>
-                                                    {platform === "macos"
-                                                        ? "macOS"
-                                                        : platform[0].toUpperCase() +
-                                                          platform.slice(1)}
-                                                </p>
-                                                {downloadData &&
-                                                    platform === "windows" && (
-                                                        <small className="text-xs text-zinc-300 mt-4">
-                                                            You may get an
-                                                            antivirus
-                                                            notification that
-                                                            you have to skip.
-                                                        </small>
-                                                    )}
                                                 {downloadData[platform].map(
                                                     (download, index) => (
                                                         <a
                                                             key={index}
-                                                            href={`https://github.com/dathere/qsv-pro-releases/releases/download/${name}/${download}`} // Replace with actual download path
-                                                            className={`block text-white font-bold py-2 px-4 rounded mt-4 ${
+                                                            href={`https://github.com/dathere/qsv-pro-releases/releases/download/${name}/${download[1]}`} // Replace with actual download path
+                                                            className={`block lg:min-w-96 text-white font-bold py-2 px-4 rounded mt-4 ${
                                                                 platform === OS
                                                                     ? " bg-teal-500 hover:bg-teal-700"
                                                                     : " bg-blue-500 hover:bg-blue-700"
                                                             }`}
                                                             download
                                                         >
-                                                            {download}
+                                                            {download[0]}
+                                                            {platform ===
+                                                                "windows" && (
+                                                                <>
+                                                                    <br />
+                                                                    <small className="text-xs text-zinc-300 mt-4">
+                                                                        You may
+                                                                        get an
+                                                                        antivirus
+                                                                        notification
+                                                                        that you
+                                                                        have to
+                                                                        skip.
+                                                                    </small>
+                                                                </>
+                                                            )}
                                                         </a>
                                                     )
                                                 )}

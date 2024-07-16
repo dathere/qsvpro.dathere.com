@@ -29,12 +29,8 @@ const FAQData = [
     },
     {
         question: "How do I get qsv pro?",
-        answer: "You may download the latest version of qsv pro with a 7-day free trial (no payment method required). During or after the trial, you may purchase a license to continue using qsv pro. You may choose between any of the installers for Windows (.msi, -setup.exe), macOS (.app, .dmg), and Linux (.AppImage, .deb).",
+        answer: "You may download the latest version of qsv pro with a 7-day free trial (no payment method required) from the top of this page. During or after the trial, you may purchase a license to continue using qsv pro. You may choose between any of the installers for Windows (.msi), macOS (.app.tar.gz), and Linux (.AppImage).",
         links: [
-            {
-                label: "Download qsv pro",
-                url: "https://github.com/dathere/qsv-pro/releases/latest",
-            },
             {
                 label: "Purchase a license",
                 url: "https://store.dathere.com/checkout/buy/41f919fd-2b68-40ea-a5ed-0f531b2efba5",
