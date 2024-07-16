@@ -157,7 +157,7 @@ export const Hero = () => {
                                                             href={`https://github.com/dathere/qsv-pro-releases/releases/download/${name}/${download[1]}`} // Replace with actual download path
                                                             className={`block lg:min-w-96 text-white font-bold py-2 px-4 rounded mt-4 ${
                                                                 platform === OS
-                                                                    ? " bg-teal-500 hover:bg-teal-700"
+                                                                    ? " bg-teal-600 hover:bg-teal-700"
                                                                     : " bg-blue-500 hover:bg-blue-700"
                                                             }`}
                                                             download
