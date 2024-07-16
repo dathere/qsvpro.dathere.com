@@ -191,6 +191,17 @@ export const Pricing = () => {
                             </div>
                         </div>
                     </div>
+                    <br />
+                    <p className="text-center text-zinc-200">
+                        Want to learn more?{" "}
+                        <a
+                            className="text-blue-400"
+                            href="https://dathere.com/product-demo-request/"
+                        >
+                            Request a demo
+                        </a>
+                        .
+                    </p>
                 </motion.div>
             </div>
         </section>
