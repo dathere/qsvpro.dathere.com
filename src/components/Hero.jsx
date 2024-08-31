@@ -160,21 +160,6 @@ export const Hero = () => {
                                                             download
                                                         >
                                                             {download[0]}
-                                                            {platform ===
-                                                                "windows" && (
-                                                                <>
-                                                                    <br />
-                                                                    <small className="text-xs text-zinc-300 mt-4">
-                                                                        You may
-                                                                        get an
-                                                                        antivirus
-                                                                        notification
-                                                                        that you
-                                                                        have to
-                                                                        skip.
-                                                                    </small>
-                                                                </>
-                                                            )}
                                                         </a>
                                                     )
                                                 )}
