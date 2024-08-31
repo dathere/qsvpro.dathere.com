@@ -89,16 +89,13 @@ export const Hero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.05 }}
                 >
-                    <div className="grid grid-cols-1 sm:flex sm:ml-20 place-items-center justify-center items-center">
+                    <div className="grid grid-cols-1 sm:flex sm:ml-10 place-items-center justify-center items-center">
                         {/* <span>qsv pro</span> */}
                         <img
                             src={qsvProLogo.src}
                             alt="qsv pro logo"
                             className="w-72 sm:w-96 lg:w-120"
                         />
-                        <p className="text-white font-['Inter'] text-xl mt-2 h-fit w-fit">
-                            (preview)
-                        </p>
                     </div>
                 </motion.div>
                 <motion.div

@@ -43,7 +43,7 @@ export const Navbar = () => {
                                 className="h-8"
                             />
                             <small className="text-white font-['Inter'] text-xs mb-1 rounded-full px-1 border">
-                                preview
+                                Download v1 now! Website update is planned.
                             </small>
                         </div>
                     </a>
