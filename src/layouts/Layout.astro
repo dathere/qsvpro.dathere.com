@@ -23,22 +23,30 @@ const { title } = Astro.props;
     <!-- Primary Meta Tags -->
     <title>{title}</title>
     <meta name="title" content={title} />
-    <meta name="description" content="Transform and upload spreadsheet data to CKAN with our streamlined desktop app, featuring 'recipes' for common data wrangling tasks. Based on the qsv CLI tool." />
+    <meta
+      name="description"
+      content="Transform and upload spreadsheet data to CKAN with our streamlined desktop app, featuring 'recipes' for common data wrangling tasks. Based on the qsv CLI tool."
+    />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://qsvpro.dathere.com" />
     <meta property="og:title" content={title} />
-    <meta property="og:description" content="Transform and upload spreadsheet data to CKAN with our streamlined desktop app, featuring 'recipes' for common data wrangling tasks. Based on the qsv CLI tool." />
-    <meta property="og:image" content="/sm-preview.png" />
+    <meta
+      property="og:description"
+      content="Transform and upload spreadsheet data to CKAN with our streamlined desktop app, featuring 'recipes' for common data wrangling tasks. Based on the qsv CLI tool."
+    />
+    <meta property="og:image" content="/sm-preview.jpg" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://qsvpro.dathere.com" />
     <meta property="twitter:title" content={title} />
-    <meta property="twitter:description" content="Transform and upload spreadsheet data to CKAN with our streamlined desktop app, featuring 'recipes' for common data wrangling tasks. Based on the qsv CLI tool." />
-    <meta property="twitter:image" content="/sm-preview.png" />
-
+    <meta
+      property="twitter:description"
+      content="Transform and upload spreadsheet data to CKAN with our streamlined desktop app, featuring 'recipes' for common data wrangling tasks. Based on the qsv CLI tool."
+    />
+    <meta property="twitter:image" content="/sm-preview.jpg" />
   </head>
   <body>
     <slot />
