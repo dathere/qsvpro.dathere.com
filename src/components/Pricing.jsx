@@ -4,11 +4,25 @@ import { motion } from "framer-motion";
 import { CheckArrowIcon } from "../assets/icons/CheckArrowIcon";
 
 const pricingData = [
-    "Import local spreadsheet data",
-    "Transform data with recipes",
-    "Upload to CKAN instances",
-    "Interactive data table view",
-    "Configurator GUI (experimental)",
+    ["Import spreadsheets up to 1MB",
+    "Transform data with free recipes",
+    "List 1 CKAN instance",
+    "Use free tools in Toolbox",
+    "Use qsv slice from Flow",
+    "Use qsv count and qsv slice in Configurator (experimental)",
+    "Export Workflow file data and various data table data to CSV, TSV, TAB, and SSV"
+    ],
+    ["Import spreadsheets larger than 1MB",
+    "View extra statistics in the Workflow based on your file",
+    "Transform data with Pro recipes",
+    "List more than 1 CKAN instance",
+    "Use Pro tools in Toolbox",
+    "Use more qsv commands other than qsv slice from Flow",
+    "Use more qsv commands other than qsv count and qsv slice in Configurator (experimental)",
+    "Export Workflow file data and various data table data to 16 formats",
+    "Run csvlens on a spreadsheet or data table in a new Alacritty terminal (Windows only)"
+    ],
+    []
 ];
 
 export const Pricing = () => {
@@ -29,7 +43,7 @@ export const Pricing = () => {
                     transition={{ duration: 0.5, delay: 0.2 }}
                 >
                     <div className="container mx-auto px-4">
-                        <div className="max-w-2xl mx-auto text-center mb-16">
+                        <div className="max-w-2xl mx-auto text-center">
                             <span className="custom-block-subtitle">
                                 Pick a Plan
                             </span>
@@ -37,10 +51,8 @@ export const Pricing = () => {
                                 Choose your plan
                             </h2>
                             <p className="mb-6 text-customGrayText">
-                                After you complete your 7-day free trial, you'll
-                                need a license key to continue using qsv pro.
-                                Select the subscription plan that suits your
-                                needs and benefit from qsv pro.
+                                To unlock paid features, you'll
+                                need to purchase and activate a license key. USD pricing.
                             </p>
                             <label className="mx-auto bg-customDarkBg3 relative flex justify-between items-center group text-xl w-44 h-12 rounded-lg pr-36 pl-1 cursor-pointer">
                                 <input
@@ -68,61 +80,64 @@ export const Pricing = () => {
                                 </div>
                             </label>
                         </div>
-                        <div className="flex flex-wrap flex-col lg:flex-row -mx-4 items-center mt-20">
+                        <div className="flex flex-wrap flex-col lg:flex-row -mx-4 items-center mt-6">
                             <div className="w-[350px] sm:w-[380px] lg:w-1/3 px-4 mb-8 lg:mb-0">
-                                {/* <div className="p-8 bg-customDarkBg3 rounded-3xl">
-                                    <h4 className="mb-2 text-xl font-bold font-heading text-white text-left">
-                                        Beginner
+                                <div className="px-8 py-8 bg-customDarkBg3 rounded-3xl">
+                                    <h4 className="mb-2 2xl:mb-4 text-2xl font-bold font-heading text-white text-left">
+                                        Free
                                     </h4>
                                     <div className="flex justify-start items-end">
                                         <div className="text-4xl sm:text-5xl font-bold text-white text-left mt-4 mr-2">
                                             $0
                                         </div>
-                                        <div className="text-gray-500">
-                                            {isMonthly ? "/ month" : "/ year"}
-                                        </div>
                                     </div>
-
-                                    <p className="mt-4 mb-6 2xl:mb-10 text-gray-500 leading-loose text-left">
-                                        The perfect way to get started and get
-                                        used to our tools.
+                                    <p className="my-4 text-gray-400 leading-loose text-left">
+                                        No license key required
                                     </p>
-                                    <ul className="mb-2 2xl:mb-6 text-white">
-                                        {pricingData.map((text, index) => (
+                                    <ul className="mb-14 text-white">
+                                        {pricingData[0].map((text, index) => (
                                             <li
                                                 className="mb-4 flex"
                                                 key={`${text}-${index}`}
                                             >
-                                                <CheckArrowIcon />
+                                                <CheckArrowIcon
+                                                    fillColor={
+                                                        text.includes(
+                                                            "(experimental)"
+                                                        )
+                                                            ? "fill-red-300"
+                                                            : ""
+                                                    }
+                                                />
                                                 <span>{text}</span>
                                             </li>
                                         ))}
                                     </ul>
-                                    <div
-                                        className="inline-block text-center py-2 px-4 w-full rounded-xl rounded-t-xl custom-button-colored font-bold leading-loose mt-16"
-                                    >
-                                        Get Started
-                                    </div>
-                                </div> */}
+                                    <a href="#">
+                                        <div className="inline-block text-center py-2 px-4 w-full custom-button-colored leading-loose transition duration-200">
+                                            Download qsv pro
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
                             <div className="w-[350px] sm:w-[380px] lg:w-1/3 px-4 mb-8 lg:mb-0">
-                                <div className="px-8 py-8 bg-customDarkBg3 rounded-3xl">
-                                    <h4 className="mb-2 2xl:mb-4 text-2xl font-bold font-heading text-white text-left">
-                                        qsv pro (preview)
+                                <div className="px-8 py-8 bg-blue-950 rounded-3xl border-4 border-blue-600">
+                                    <h4 className="mb-2 2xl:mb-4 text-3xl font-bold font-heading text-white text-left">
+                                        Pro
                                     </h4>
                                     <div className="flex justify-start items-end">
                                         <div className="text-4xl sm:text-5xl font-bold text-white text-left mt-4 mr-2">
                                             {isMonthly ? "$99.99" : "$999.00"}
                                         </div>
-                                        <div className="text-gray-500">
+                                        <div className="text-gray-400">
                                             {isMonthly ? "/ month" : "/ year"}
                                         </div>
                                     </div>
-                                    <p className="mt-8 mb-8 2xl:mb-12 text-gray-500 leading-loose text-left">
-                                        1 license key
+                                    <p className="mt-8 mb-8 2xl:mb-12 text-gray-400 leading-loose text-left">
+                                        1 license key (1 device at a time)
                                     </p>
                                     <ul className="mb-14 text-white">
-                                        {pricingData.map((text, index) => (
+                                        {pricingData[1].map((text, index) => (
                                             <li
                                                 className="mb-4 flex"
                                                 key={`${text}-${index}`}
@@ -148,46 +163,50 @@ export const Pricing = () => {
                                         }
                                         target="_blank"
                                     >
-                                        <div className="inline-block text-center py-2 px-4 w-full custom-button-colored leading-loose transition duration-200 mt-20">
+                                        <div className="inline-block text-center py-2 px-4 w-full custom-button-colored leading-loose transition duration-200">
                                             Purchase a License Key
                                         </div>
                                     </a>
                                 </div>
                             </div>
                             <div className="w-[350px] sm:w-[380px] lg:w-1/3 px-4 mb-8 lg:mb-0">
-                                {/* <div className="p-8 bg-customDarkBg3 rounded-3xl">
-                                    <h4 className="mb-2 text-xl font-bold font-heading text-white text-left">
-                                        Premium
+                                <div className="px-8 py-8 bg-customDarkBg3 rounded-3xl">
+                                    <h4 className="mb-2 2xl:mb-4 text-2xl font-bold font-heading text-white text-left">
+                                        Business / Enterprise
                                     </h4>
                                     <div className="flex justify-start items-end">
                                         <div className="text-4xl sm:text-5xl font-bold text-white text-left mt-4 mr-2">
-                                            {isMonthly ? "$36" : "$390"}
-                                        </div>
-                                        <div className="text-gray-500">
-                                            {isMonthly ? "/ month" : "/ year"}
+                                            Contact us
                                         </div>
                                     </div>
-                                    <p className="mt-4 mb-6 2xl:mb-10 text-gray-500 leading-loose text-left">
-                                        Experience the full power of our
-                                        analytic platform
+                                    <p className="my-4 text-gray-400 leading-loose text-left">
+                                        License keys by approved request
                                     </p>
-                                    <ul className="mb-2 2xl:mb-6 text-white">
-                                        {pricingData.map((text, index) => (
+                                    <ul className="mb-14 text-white">
+                                        {pricingData[2].map((text, index) => (
                                             <li
                                                 className="mb-4 flex"
                                                 key={`${text}-${index}`}
                                             >
-                                                <CheckArrowIcon />
+                                                <CheckArrowIcon
+                                                    fillColor={
+                                                        text.includes(
+                                                            "(experimental)"
+                                                        )
+                                                            ? "fill-red-300"
+                                                            : ""
+                                                    }
+                                                />
                                                 <span>{text}</span>
                                             </li>
                                         ))}
                                     </ul>
-                                    <div
-                                        className="inline-block text-center py-2 px-4 w-full rounded-xl rounded-t-xl custom-button-colored font-bold leading-loose mt-16"
-                                    >
-                                        Get Started
-                                    </div>
-                                </div> */}
+                                    <a href="https://dathere.com/contact">
+                                        <div className="inline-block text-center py-2 px-4 w-full custom-button-colored leading-loose transition duration-200">
+                                            Contact us
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>

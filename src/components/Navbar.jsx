@@ -42,9 +42,9 @@ export const Navbar = () => {
                                 alt="qsv pro logo"
                                 className="h-8"
                             />
-                            <small className="text-white font-['Inter'] text-xs mb-1 rounded-full px-1 border">
+                            {/* <small className="text-white font-['Inter'] text-xs mb-1 rounded-full px-1 border">
                                 Download v1 now! Website update is planned.
-                            </small>
+                            </small> */}
                         </div>
                     </a>
                 </motion.div>

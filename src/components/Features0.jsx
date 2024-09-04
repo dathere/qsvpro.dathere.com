@@ -6,8 +6,7 @@ import { CheckArrowIcon } from "../assets/icons/CheckArrowIcon";
 export const Features0 = () => {
     return (
         <section
-            className="w-full bg-customDarkBg2 mt-20 mb-8 sm:mt-16 sm:mb-16 xl:mt-0 pt-[2rem] md:pt-[12vw] lg:pt-16"
-            id="features"
+            className="w-full bg-customDarkBg2 mt-20 mb-8 sm:mt-16 sm:mb-16 xl:mt-0"
         >
             <motion.div
                 initial={{ opacity: 0 }}
@@ -40,15 +39,7 @@ export const Features0 = () => {
                                 <li className="mb-4 flex">
                                     <CheckArrowIcon />
                                     <span>
-                                        File formats: .csv, .xlsx,{" "}
-                                        <span className="text-red-300">
-                                            .tsv, .tab, .xls, .ods, .xlsm, .xlsb
-                                        </span>
-                                        <br />
-                                        <span className="text-red-300">
-                                            *Experimental file formats, may not
-                                            work as expected.
-                                        </span>
+                                        File formats: .csv, .xlsx, .tsv, .tab, .xls, .ods, .xlsm, .xlsb
                                     </span>
                                 </li>
                                 <li className="mb-4 flex">
@@ -61,8 +52,8 @@ export const Features0 = () => {
                                 <li className="mb-4 flex">
                                     <CheckArrowIcon />
                                     <span>
-                                        Begins scanning and analyzing your data
-                                        on import
+                                        Begins process to scan and analysis file data
+                                        after import
                                     </span>
                                 </li>
                                 <li className="mb-4 flex">

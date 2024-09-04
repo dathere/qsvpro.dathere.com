@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import dashboard from "../assets/images/dashboard.png";
 import qsvProLogo from "../assets/logos/qsv-pro-logo.png";
 import Download from "../assets/icons/Download.jsx";
+import FeatureCarousel from "./FeatureCarousel.jsx";
 
 export const Hero = () => {
     const [downloadData, setDownloadData] = useState();
@@ -71,7 +72,7 @@ export const Hero = () => {
 
     return (
         <section
-            className="w-screen  flex justify-center items-center bg-customDarkBg1 mb-[28vw] md:mb-[18vw] lg:mb-[10vw] xl:mb-[13vw] 2xl:mb-60 hero-bg-gradient pb-24 sm:pb-32 md:pb-44 lg:pb-0"
+            className="w-screen flex justify-center items-center bg-customDarkBg1 mb-40 hero-bg-gradient pb-24 sm:pb-32 md:pb-44 lg:pb-0"
             id="home"
         >
             <div className="w-full md:w-[1100px] flex flex-col justify-center items-center pt-16 md:pt-16 lg:pt-20 text-center">
@@ -104,24 +105,13 @@ export const Hero = () => {
                     transition={{ duration: 0.5, delay: 0.1 }}
                 >
                     <div className="text-customGrayText text-sm lg:text-base xl:text-lg sm:text-base mt-10 px-12 sm:px-48 ">
-                        Transform and upload spreadsheet data to{" "}
-                        <a
+                        Transform spreadsheet data and view statistics in interactive data tables, download/upload from/to compatible <a
                             href="https://ckan.org"
                             target="_blank"
                             className="text-blue-300"
                         >
                             CKAN
-                        </a>{" "}
-                        with our streamlined desktop app, featuring "recipes"
-                        for common data wrangling tasks. Based on the{" "}
-                        <a
-                            href="https://github.com/jqnatividad/qsv"
-                            target="_blank"
-                            className="text-blue-300"
-                        >
-                            qsv
-                        </a>{" "}
-                        CLI tool.
+                        </a> instances, and explore qsv pro.
                     </div>
                 </motion.div>
                 <motion.div
@@ -133,8 +123,7 @@ export const Hero = () => {
                         {downloadData && OS !== "unknown" ? (
                             <>
                                 <p className="text-white text-md text-center mx-auto mb-4">
-                                    Start your 7-day free trial,{" "}
-                                    <u>no payment required</u>.
+                                    Download qsv pro and explore the free plan or unlock features with a paid plan.
                                 </p>
                                 <div className="flex justify-center">
                                     {Object.keys(downloadData).map(
@@ -182,8 +171,7 @@ export const Hero = () => {
                                     </div>
                                 </a>
                                 <p className="text-white text-sm sm:text-base text-center mx-auto">
-                                    Start your 7-day free trial,{" "}
-                                    <u>no payment required</u>.
+                                    Download qsv pro and explore the free plan or unlock features with a paid plan.
                                 </p>
                             </>
                         )}
@@ -198,17 +186,20 @@ export const Hero = () => {
                     initial={{ opacity: 0, y: 10, zIndex: 20 }}
                     animate={{ opacity: 1, y: 0, zIndex: 20 }}
                     transition={{ duration: 0.5, delay: 0.15 }}
+                    id="features"
+                    className="w-full"
                 >
-                    <div className="relative w-screen flex justify-center ">
-                        <img
+                    <div className="relative w-full flex justify-center">
+                        <FeatureCarousel />
+                            {/*<img
                             src={dashboard.src}
                             alt="123"
                             className="w-4/5 2xl:w-[1200px] mx-auto absolute z-10 rounded-xl custom-border-gray hero-dashboard-border-gradient lg:top-6 xl:top-0"
-                        />
+                        />*/}
                     </div>
                 </motion.div>
                 <div className="relative w-screen flex justify-center ">
-                    <div className="custom-shape-divider-bottom-1665343298 mt-4 sm:mt-16 md:mt-52 hidden lg:block">
+                    <div className="custom-shape-divider-bottom-1665343298 hidden lg:block">
                         <svg
                             data-name="Layer 1"
                             xmlns="http://www.w3.org/2000/svg"

@@ -5,34 +5,24 @@ import generateCkanApiToken from "../assets/images/faq/generate-ckan-api-token.p
 const FAQData = [
     {
         question: "What is qsv pro?",
-        answer: "qsv pro is a spreadsheet data wrangling desktop application to view, transform, and upload data to CKAN with a graphical user interface based on the qsv CLI tool. It features a suite of recipes (scripts) for common data wrangling tasks to perform on your spreadsheet, including sorting rows, removing duplicate rows, and removing Personally Identifiable Information (PII).",
-    },
-    {
-        question: 'What does "preview" mean?',
-        answer: "qsv pro is currently in preview, which means that it may contain bugs and does not include all of the features that are planned in a stable release (features may also be removed). If you encounter any bugs or have any feature/feedback requests, you may contact us on our support site by creating a ticket.",
+        answer: "qsv pro is a desktop application to view and transform spreadsheet data (for example Microsoft Excel data and CSV) with a graphical user interface based on the qsv CLI tool. It includes multiple features for data wrangling and is available on compatible Windows, macOS, and Linux devices.",
         links: [
             {
-                label: "Support site",
-                url: "https://support.dathere.com",
+                label: "About datHere",
+                url: "https://dathere.com",
             },
-        ],
-    },
-    {
-        question: 'What does "experimental" mean?',
-        answer: "qsv pro may include experimental features that may not be fully functional/tested or may not be included in a stable release. If you encounter any bugs or have any feature/feedback requests, you may contact us on our support site by creating a ticket.",
-        links: [
             {
-                label: "Support site",
-                url: "https://support.dathere.com",
+                label: "Learn to use qsv",
+                url: "https://100.dathere.com",
             },
         ],
     },
     {
         question: "How do I get qsv pro?",
-        answer: "You may download the latest version of qsv pro with a 7-day free trial (no payment method required) from the top of this page. During or after the trial, you may purchase a license to continue using qsv pro. You may choose between any of the installers for Windows (.msi), macOS (.app.tar.gz), and Linux (.AppImage).",
+        answer: "You may download the latest version of qsv pro from the top of this page. Within the app you may continue with the free plan or you may purchase a license key from store.dathere.com to use paid features. You may choose between any of the installers for Windows (.msi), macOS (.app.tar.gz), and Linux (.AppImage).",
         links: [
             {
-                label: "Purchase a license",
+                label: "Purchase a license key",
                 url: "https://store.dathere.com/checkout/buy/41f919fd-2b68-40ea-a5ed-0f531b2efba5",
             },
         ],
@@ -42,7 +32,7 @@ const FAQData = [
         answer: "You may provide feedback on our support site by creating a ticket.",
         links: [
             {
-                label: "Support site",
+                label: "Contact support",
                 url: "https://support.dathere.com",
             },
         ],
@@ -58,6 +48,20 @@ const FAQData = [
         ],
     },
     {
+        question: "How can I use qsv pro on more than one device?",
+        answer: "Each license key can only be activated for 1 device at a time. If you used your license key on a device and want to use it on a different device, you may deactivate your license key by navigating to your billing information page then deactivate your license. Then you may activate your license key on your other device. If you need more than 1 device to use qsv pro at one time, you may purchase an additional license key.",
+        links: [
+            {
+                label: "Manage billing information",
+                url: "https://store.dathere.com/billing",
+            },
+            {
+                label: "Purchase a license key",
+                url: "https://store.dathere.com/checkout/buy/41f919fd-2b68-40ea-a5ed-0f531b2efba5",
+            },
+        ],
+    },
+    {
         question: "Where can I manage my billing information?",
         answer: "You may manage your billing information at store.dathere.com/billing.",
         links: [
@@ -69,7 +73,41 @@ const FAQData = [
     },
     {
         question: "Is there a light theme?",
-        answer: "Yes, you may change the theme with the sun/moon icon on the top right of qsv pro.",
+        answer: "Yes, you may change the theme with the sun/moon icon on the navigation panel of qsv pro.",
+    },
+    {
+        question: "Can I change the zoom size?",
+        answer: "Yes, you may change the zoom size in the settings panel of qsv pro.",
+    },
+    {
+        question: "What is qsv pro's current status?",
+        answer: "qsv pro has reached version 1, but that does not mean it cannot contain errors and features may still be added and/or improved. If you encounter any bugs or have any feature/feedback requests, you may contact us on our support site by creating a ticket.",
+        links: [
+            {
+                label: "Contact support",
+                url: "https://support.dathere.com",
+            },
+        ],
+    },
+    {
+        question: 'Why is "experimental" mentioned?',
+        answer: "qsv pro may include \"experimental\" features that may not be fully functional/tested and may be outdated. If you encounter any bugs or have any feature/feedback requests, you may contact us on our support site by creating a ticket.",
+        links: [
+            {
+                label: "Contact support",
+                url: "https://support.dathere.com",
+            },
+        ],
+    },
+    {
+        question: 'What is CKAN?',
+        answer: "CKAN is an open-source data management system used around the world. You may learn more at ckan.org.",
+        links: [
+            {
+                label: "CKAN website",
+                url: "https://ckan.org",
+            },
+        ],
     },
 ];
 
