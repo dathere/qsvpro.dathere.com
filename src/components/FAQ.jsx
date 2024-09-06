@@ -38,6 +38,16 @@ const FAQData = [
         ],
     },
     {
+        question: 'What is CKAN?',
+        answer: "CKAN is an open-source data management system used around the world. You may learn more at ckan.org.",
+        links: [
+            {
+                label: "CKAN website",
+                url: "https://ckan.org",
+            },
+        ],
+    },
+    {
         question: "Where can I generate a CKAN API token?",
         answer: "You may generate a CKAN API token by logging into your CKAN account on your CKAN instance. Then, click on the user profile icon on the top right corner, click the 'API Tokens' tab, enter any name for your token and click the 'Create API Token' button, and then your API token will appear on the page. Note that you may not view your API token from qsv pro, so we recommend saving this token somewhere safe.",
         screenshots: [
@@ -98,17 +108,7 @@ const FAQData = [
                 url: "https://support.dathere.com",
             },
         ],
-    },
-    {
-        question: 'What is CKAN?',
-        answer: "CKAN is an open-source data management system used around the world. You may learn more at ckan.org.",
-        links: [
-            {
-                label: "CKAN website",
-                url: "https://ckan.org",
-            },
-        ],
-    },
+    }
 ];
 
 export const FAQ = () => (
