@@ -82,6 +82,16 @@ const FAQData = [
         ],
     },
     {
+      question: "How do I run this on my Linux distribution?",
+      answer: "If you have a compatible Linux setup, then qsv pro should work as intended from the AppImage. You may need to change the AppImage file's permission to be executable by running the 'chmod +x <AppImage path>' command where 'AppImage path' is the path to your AppImage file. Then you may attempt running the AppImage file. If you get a FUSE error, please visit the documentation listed below to install FUSE version 2 for your system.",
+      links: [
+          {
+              label: "AppImage/AppImageKit FUSE wiki article",
+              url: "https://github.com/AppImage/AppImageKit/wiki/FUSE",
+          },
+      ],
+    },
+    {
         question: "Is there a light theme?",
         answer: "Yes, you may change the theme with the sun/moon icon on the navigation panel of qsv pro.",
     },
