@@ -83,8 +83,12 @@ const FAQData = [
     },
     {
       question: "How do I run this on my Linux distribution?",
-      answer: "If you have a compatible Linux setup, then qsv pro should work as intended from the AppImage. You may need to change the AppImage file's permission to be executable by running the 'chmod +x <AppImage path>' command where 'AppImage path' is the path to your AppImage file. Then you may attempt running the AppImage file. If you get a FUSE error, please visit the documentation listed below to install FUSE version 2 for your system.",
+      answer: "If you're running Ubuntu 22.04, you may view our support article linked below. If you have a compatible Linux setup, then qsv pro should work as intended from the AppImage. You may need to change the AppImage file's permission to be executable by running the 'chmod +x <AppImage path>' command where 'AppImage path' is the path to your AppImage file. Then you may attempt running the AppImage file. If you get a FUSE error, please visit the documentation listed below to install FUSE version 2 for your system.",
       links: [
+          {
+              label: "Ubuntu 22.04 support article",
+              url: "https://support.dathere.com/support/solutions/articles/154000196571-how-to-install-qsv-pro-on-ubuntu-22-04"
+          },
           {
               label: "AppImage/AppImageKit FUSE wiki article",
               url: "https://github.com/AppImage/AppImageKit/wiki/FUSE",
