@@ -20,7 +20,7 @@ const FeatureCarousel = () => {
         {
             title: "Flow - Build custom node-based flows and data pipelines",
             description:
-                "Engineer data pipelines using an interactive node-based UI. Access multiple qsv commands and pipe them together along with custom nodes to architect data pipelines. Share or import your pipelines with other qsv pro users.",
+                "Engineer data pipelines using an interactive node-based UI. Access multiple qsv commands and pipe them together along with custom nodes to architect data pipelines. Share or import your pipelines with other paid qsv pro users.",
             image: flowDemo,
         },
         {
