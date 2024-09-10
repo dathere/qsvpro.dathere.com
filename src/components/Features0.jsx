@@ -52,7 +52,7 @@ export const Features0 = () => {
                                 <li className="mb-4 flex">
                                     <CheckArrowIcon />
                                     <span>
-                                        Begins process to scan and analysis file data
+                                        Begins scanning and analysis of compatible file data
                                         after import
                                     </span>
                                 </li>

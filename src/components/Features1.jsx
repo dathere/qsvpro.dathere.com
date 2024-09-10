@@ -42,6 +42,12 @@ export const Features1 = () => {
                                         Information (PII)
                                     </span>
                                 </li>
+                                <li className="mb-4 flex">
+                                    <CheckArrowIcon />
+                                    <span>
+                                        Reverse rows
+                                    </span>
+                                </li>
                             </ul>
                         </div>
                     </div>

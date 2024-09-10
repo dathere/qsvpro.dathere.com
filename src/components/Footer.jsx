@@ -123,7 +123,8 @@ export const Footer = () => {
                             </div>
                         </div>
                     </div>
-                    <p className="lg:text-center text-sm text-gray-400 border-t border-[rgb(255,255,255,0.2)] pt-4 hidden lg:block">
+                    <p className="text-center text-sm text-gray-400 border-t border-[rgb(255,255,255,0.2)] pt-4">Some content shown may be from a paid plan of qsv pro or older versions of qsv pro.</p>
+                    <p className="lg:text-center text-sm text-gray-400 pt-4 hidden lg:block">
                         &copy; datHere Inc. By using qsv pro and/or this site,
                         you agree to our{" "}
                         <a

@@ -35,7 +35,7 @@ const EmblaCarousel = (props) => {
 
   return (
     <div className="embla">
-      <div className="embla__viewport mb-4" ref={emblaMainRef}>
+      <div className="embla__viewport lg:mb-4" ref={emblaMainRef}>
         <div className="embla__container">
           {slides.map((slide, index) => (
               <div key={index} className="embla__slide space-y-2">
