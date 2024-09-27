@@ -14,6 +14,8 @@ export const Features2 = () => (
             <div className="flex flex-wrap items-center 2xl:w-[1450px] xl:w-[1300px] w-11/12 mx-auto md:pl-4 xl:pr-16 xl:pl-16">
                 <div className="w-full md:w-1/2 mb-8 md:mb-0 lg:pl-16 flex justify-center mx-auto pt-16 lg:pt-0">
                     <img
+                        decoding="async"  
+                        loading="lazy"
                         src={uploadtockan.src}
                         alt="CKAN Upload Demo"
                         className="rounded-xl custom-border-gray"

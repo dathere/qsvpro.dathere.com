@@ -5,9 +5,7 @@ import { CheckArrowIcon } from "../assets/icons/CheckArrowIcon";
 
 export const Features0 = () => {
     return (
-        <section
-            className="w-full bg-customDarkBg2 mt-20 mb-8 sm:mt-16 sm:mb-16 xl:mt-0"
-        >
+        <section className="w-full bg-customDarkBg2 mt-20 mb-8 sm:mt-16 sm:mb-16 xl:mt-0">
             <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -39,7 +37,8 @@ export const Features0 = () => {
                                 <li className="mb-4 flex">
                                     <CheckArrowIcon />
                                     <span>
-                                        File formats: .csv, .xlsx, .tsv, .tab, .xls, .ods, .xlsm, .xlsb
+                                        File formats: .csv, .xlsx, .tsv, .tab,
+                                        .xls, .ods, .xlsm, .xlsb
                                     </span>
                                 </li>
                                 <li className="mb-4 flex">
@@ -52,8 +51,8 @@ export const Features0 = () => {
                                 <li className="mb-4 flex">
                                     <CheckArrowIcon />
                                     <span>
-                                        Begins scanning and analysis of compatible file data
-                                        after import
+                                        Begins scanning and analysis of
+                                        compatible file data after import
                                     </span>
                                 </li>
                                 <li className="mb-4 flex">

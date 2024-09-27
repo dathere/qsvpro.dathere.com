@@ -53,6 +53,8 @@ export const Features1 = () => {
                     </div>
                     <div className="w-full md:w-3/4 mb-8 md:mb-0 mx-auto lg:w-1/2 flex flex-wrap lg:-mx-4 sm:pr-8 justify-center">
                         <img
+                            decoding="async"  
+                            loading="lazy"
                             src={recipedemo.src}
                             alt="Recipe Demo"
                             className="rounded-xl custom-border-gray"
