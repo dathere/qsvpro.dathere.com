@@ -39,7 +39,7 @@ const EmblaCarousel = (props) => {
         <div className="embla__container">
           {slides.map((slide, index) => (
               <div key={index} className="embla__slide space-y-2">
-              <img src={slide.image.src} alt="qsv pro feature demo GIF" className={index === slides.length - 1 ? `border-4 rounded h-[35rem] mx-auto border-zinc-600` : `border-4 rounded border-zinc-600`} />
+              <img decoding="async" loading="lazy" src={slide.image.src} alt="qsv pro feature demo GIF" className={index === slides.length - 1 ? `border-4 rounded h-[35rem] mx-auto border-zinc-600` : `border-4 rounded border-zinc-600`} />
                   <h2 className="text-2xl font-bold pt-4 text-[#F2F2F2]">{slide.title}</h2>
                   <p className="text-lg text-center text-[#F2F2F2]">{slide.description}</p>
               </div>

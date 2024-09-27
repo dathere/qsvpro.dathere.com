@@ -105,13 +105,17 @@ export const Hero = () => {
                     transition={{ duration: 0.5, delay: 0.1 }}
                 >
                     <div className="text-customGrayText text-sm lg:text-base xl:text-lg sm:text-base mt-10 px-12 sm:px-48 ">
-                        Transform spreadsheet data and view statistics in interactive data tables, download/upload from/to compatible <a
+                        Transform spreadsheet data and view statistics in
+                        interactive data tables, download/upload from/to
+                        compatible{" "}
+                        <a
                             href="https://ckan.org"
                             target="_blank"
                             className="text-blue-300"
                         >
                             CKAN
-                        </a> instances, and explore qsv pro.
+                        </a>{" "}
+                        instances, and explore qsv pro.
                     </div>
                 </motion.div>
                 <motion.div
@@ -121,62 +125,63 @@ export const Hero = () => {
                 >
                     <div className="grid grid-cols-1 place-items-center gap-2 sm:flex-row mt-14 mb-24 sm:mb-40 justify-center">
                         {downloadData && OS !== "unknown" ? (
-                          <>
-                              <p className="text-white text-md text-center mx-auto mb-4">
-                                  Download qsv pro and explore the free plan
-                                  or unlock features with a paid plan.
-                              </p>
-                              <div className="flex justify-center">
-                                  {Object.keys(downloadData).map(
-                                      (platform) => (
-                                          <div
-                                              key={platform}
-                                              className={`mx-4 ${
-                                                  platform === OS
-                                                      ? "text-white text-xl font-bold"
-                                                      : "text-white"
-                                              }`}
-                                          >
-                                              {downloadData[platform].map(
-                                                  (download, index) => (
-                                                      <>
-                                                          {platform ===
-                                                              "windows" && (
-                                                              <div className="flex justify-center">
-                                                                  <a href="https://apps.microsoft.com/detail/xpffdj3f1jsztf?mode=full">
-                                                                      <img
-                                                                          src="https://get.microsoft.com/images/en-us%20light.svg"
-                                                                          width="200"
-                                                                      />
-                                                                  </a>
-                                                              </div>
-                                                          )}
-                                                          <a
-                                                              key={index}
-                                                              href={`https://github.com/dathere/qsv-pro-releases/releases/download/${name}/${download[1]}`} // Replace with actual download path
-                                                              className={`block lg:min-w-96 text-white font-bold py-2 px-4 rounded mt-4 ${
-                                                                  platform ===
-                                                                  OS
-                                                                      ? " bg-teal-600 hover:bg-teal-700"
-                                                                      : " bg-blue-500 hover:bg-blue-700"
-                                                              }`}
-                                                              download
-                                                          >
-                                                              {download[0]}
-                                                          </a>
-                                                      </>
-                                                  )
-                                              )}
-                                          </div>
-                                      )
-                                  )}
-                              </div>
-                          </>
+                            <>
+                                <p className="text-white text-md text-center mx-auto mb-4">
+                                    Download qsv pro and explore the free plan
+                                    or unlock features with a paid plan.
+                                </p>
+                                <div className="flex justify-center">
+                                    {Object.keys(downloadData).map(
+                                        (platform) => (
+                                            <div
+                                                key={platform}
+                                                className={`mx-4 ${
+                                                    platform === OS
+                                                        ? "text-white text-xl font-bold"
+                                                        : "text-white"
+                                                }`}
+                                            >
+                                                {downloadData[platform].map(
+                                                    (download, index) => (
+                                                        <>
+                                                            {platform ===
+                                                                "windows" && (
+                                                                <div className="flex justify-center">
+                                                                    <a href="https://apps.microsoft.com/detail/xpffdj3f1jsztf?mode=full">
+                                                                        <img
+                                                                            src="https://get.microsoft.com/images/en-us%20light.svg"
+                                                                            width="200"
+                                                                        />
+                                                                    </a>
+                                                                </div>
+                                                            )}
+                                                            <a
+                                                                key={index}
+                                                                href={`https://github.com/dathere/qsv-pro-releases/releases/download/${name}/${download[1]}`} // Replace with actual download path
+                                                                className={`block lg:min-w-96 text-white font-bold py-2 px-4 rounded mt-4 ${
+                                                                    platform ===
+                                                                    OS
+                                                                        ? " bg-teal-600 hover:bg-teal-700"
+                                                                        : " bg-blue-500 hover:bg-blue-700"
+                                                                }`}
+                                                                download
+                                                            >
+                                                                {download[0]}
+                                                            </a>
+                                                        </>
+                                                    )
+                                                )}
+                                            </div>
+                                        )
+                                    )}
+                                </div>
+                            </>
                         ) : (
                             <>
                                 <a
                                     href="https://github.com/dathere/qsv-pro-releases/releases/latest"
                                     target="_blank"
+                                    className="hidden md:block"
                                 >
                                     <div className="custom-button-colored w-64 h-12 mb-2 sm:mb-0">
                                         <Download />
@@ -185,8 +190,13 @@ export const Hero = () => {
                                         </span>
                                     </div>
                                 </a>
+                                <p className="md:hidden text-white sm:text-base text-sm text-center mx-auto">
+                                    You may access download links here on a
+                                    desktop device.
+                                </p>
                                 <p className="text-white text-sm sm:text-base text-center mx-auto">
-                                    Download qsv pro and explore the free plan or unlock features with a paid plan.
+                                    Download qsv pro and explore the free plan
+                                    or unlock features with a paid plan.
                                 </p>
                             </>
                         )}
@@ -206,7 +216,7 @@ export const Hero = () => {
                 >
                     <div className="relative w-full flex justify-center">
                         <FeatureCarousel />
-                            {/*<img
+                        {/*<img
                             src={dashboard.src}
                             alt="123"
                             className="w-4/5 2xl:w-[1200px] mx-auto absolute z-10 rounded-xl custom-border-gray hero-dashboard-border-gradient lg:top-6 xl:top-0"
