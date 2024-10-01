@@ -28,8 +28,13 @@ export const Tech = () => (
                     <div className="w-2/3 sm:w-[620px] lg:w-1/2 mx-auto lg:mx-0 lg:pl-10">
                         <div className="flex flex-wrap -m-4">
                             <div className="w-1/2 sm:w-1/4 py-6 flex justify-center">
-                                <a href="https://tauri.app" target="_blank">
+                                <a
+                                    href="https://tauri.app"
+                                    target="_blank"
+                                    className="flex"
+                                >
                                     <TauriLogo />
+                                    ®️
                                 </a>
                             </div>
                             <div className="w-1/2 sm:w-1/4 py-6 flex justify-center">
