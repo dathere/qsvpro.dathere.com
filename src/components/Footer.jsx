@@ -127,12 +127,21 @@ export const Footer = () => {
                         Some content shown may be from a paid plan of qsv pro or
                         older versions of qsv pro.
                     </p>
-                    <p className="lg:text-center text-sm text-gray-400 pt-4 hidden lg:block">
+                    <p className="lg:text-center text-sm text-gray-400 pt-4">
                         TAURI is trademark of [The Tauri Programme within the
-                        Commons Conservancy]. qsv pro is not endorsed by any of
-                        the third-parties mentioned.
+                        Commons Conservancy].
                     </p>
-                    <p className="lg:text-center text-sm text-gray-400 pt-4 hidden lg:block">
+                    <p className="lg:text-center text-sm text-gray-400 pt-4">
+                        Vercel, the Vercel design, Next.js and related marks,
+                        designs and logos are trademarks or registered
+                        trademarks of Vercel, Inc. or its affiliates in the US
+                        and other countries.
+                    </p>
+                    <p className="lg:text-center text-sm text-gray-400 pt-4">
+                        qsv pro is not endorsed by any of the third-parties
+                        mentioned.
+                    </p>
+                    <p className="lg:text-center text-sm text-gray-400 pt-4">
                         &copy; datHere Inc. By using qsv pro and/or this site,
                         you agree to our{" "}
                         <a
