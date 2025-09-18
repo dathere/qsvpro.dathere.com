@@ -165,6 +165,8 @@ export const Pricing = () => {
                                                 : "https://store.dathere.com/checkout/buy/88fed582-ffd4-41e0-a94e-457fdd038130"
                                         }
                                         target="_blank"
+                                        data-rybbit-event="qsv_pro_purchase"
+                                        data-rybbit-prop-plan="Pro"
                                     >
                                         <div className="inline-block text-center py-2 px-4 w-full custom-button-colored leading-loose transition duration-200">
                                             Start 30-day free trial
@@ -205,7 +207,7 @@ export const Pricing = () => {
                                             </li>
                                         ))}
                                     </ul>
-                                    <a href="https://dathere.com/contact">
+                                    <a href="https://dathere.com/contact" data-rybbit-event="qsv_pro_purchase" data-rybbit-prop-plan="Business">
                                         <div className="inline-block text-center py-2 px-4 w-full custom-button-colored leading-loose transition duration-200">
                                             Contact us
                                         </div>
