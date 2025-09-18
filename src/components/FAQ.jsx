@@ -122,7 +122,17 @@ const FAQData = [
                 url: "https://support.dathere.com",
             },
         ],
-    }
+    },
+    {
+        question: "My question wasn't listed here. Where can I get support?",
+        answer: "You may request support on our support site by creating a ticket.",
+        links: [
+            {
+                label: "Contact support",
+                url: "https://support.dathere.com",
+            },
+        ],
+    },
 ];
 
 export const FAQ = () => (
