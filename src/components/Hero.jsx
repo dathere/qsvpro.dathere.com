@@ -45,18 +45,17 @@ export const Hero = () => {
                     ],
                     linux: [
                         [
-                            "Linux (AppImage)",
-                            `qsv.pro_${version}_amd64.AppImage`,
-                        ],
-                        [
-                            "Linux (deb)",
+                            "Linux (x86_64, deb)",
                             `qsv.pro_${version}_amd64.deb`,
                         ],
                         [
-                            "Linux (rpm)",
+                            "Linux (x86_64, rpm)",
                             `qsv.pro-${version}-1.x86_64.rpm`,
                         ],
-                        // `qsv-pro_${version}_amd64.deb`,
+                        [
+                            "Linux (x86_64, AppImage)",
+                            `qsv.pro_${version}_amd64.AppImage`,
+                        ],
                     ],
                 };
                 setDownloadData(downloadData);
@@ -136,7 +135,7 @@ export const Hero = () => {
                             <>
                                 <p className="text-white text-md text-center mx-auto mb-4">
                                     Download qsv pro and explore the free plan
-                                    or unlock features with a paid plan.
+                                    or <a href="/#pricing" className="text-blue-300">unlock features</a> with a paid plan (30-day free trial).
                                 </p>
                                 <div className="flex justify-center">
                                     {Object.keys(downloadData).map(
@@ -178,6 +177,10 @@ export const Hero = () => {
                                                                 download
                                                             >
                                                                 {download[0]}
+                                                                {platform === "windows" && <>
+                                                                    <br />
+                                                                    <small className="text-xs">Smartscreen warning? Click "More info" then "Run anyway".</small>
+                                                                </>}
                                                             </a>
                                                         </>
                                                     )
