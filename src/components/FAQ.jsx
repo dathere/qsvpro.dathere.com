@@ -83,7 +83,7 @@ const FAQData = [
     },
     {
       question: "How do I run this on my Linux distribution?",
-      answer: "If you're running Ubuntu 22.04, you may view our support article linked below. If you have a compatible Linux setup, then qsv pro should work as intended from the AppImage. You may need to change the AppImage file's permission to be executable by running the 'chmod +x <AppImage path>' command where 'AppImage path' is the path to your AppImage file. Then you may attempt running the AppImage file. If you get a FUSE error, please visit the documentation listed below to install FUSE version 2 for your system.",
+      answer: "On Linux you have three file options for installation: AppImage, deb, and rpm. If you're running Ubuntu 22.04 and need assistance, you may view our support article linked below. If you have a compatible Linux setup, then qsv pro should work as intended from the AppImage. You may need to change the AppImage file's permission to be executable by running the 'chmod +x <AppImage path>' command where 'AppImage path' is the path to your AppImage file. Then you may attempt running the AppImage file. If you get a FUSE error, please visit the documentation listed below to install FUSE version 2 for your system. For rpm installation on openSUSE Tumbleweed, you may need to install additional libraries such as libappindicator3-1 and libwebkit2gtk-4_1-0 before running qsv pro with rpm -i.",
       links: [
           {
               label: "Ubuntu 22.04 support article",

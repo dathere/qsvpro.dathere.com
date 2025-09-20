@@ -48,6 +48,14 @@ export const Hero = () => {
                             "Linux (AppImage)",
                             `qsv.pro_${version}_amd64.AppImage`,
                         ],
+                        [
+                            "Linux (deb)",
+                            `qsv.pro_${version}_amd64.deb`,
+                        ],
+                        [
+                            "Linux (rpm)",
+                            `qsv.pro-${version}-1.x86_64.rpm`,
+                        ],
                         // `qsv-pro_${version}_amd64.deb`,
                     ],
                 };
