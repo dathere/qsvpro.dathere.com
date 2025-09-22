@@ -179,7 +179,7 @@ export const Hero = () => {
                                                                 {download[0]}
                                                                 {platform === "windows" && <>
                                                                     <br />
-                                                                    <small className="text-xs">Smartscreen warning? Click "More info" then "Run anyway".</small>
+                                                                    <small className="text-xs">Smartscreen warning? Click <u>More info</u> then <u>Run anyway</u></small>
                                                                 </>}
                                                             </a>
                                                         </>
