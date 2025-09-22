@@ -44,14 +44,14 @@ export const Hero = () => {
                         // `qsv.pro_${version}_aarch64.dmg`,
                     ],
                     linux: [
-                        // [
-                        //     "Linux (x86_64, deb)",
-                        //     `qsv.pro_${version}_amd64.deb`,
-                        // ],
-                        // [
-                        //     "Linux (x86_64, rpm)",
-                        //     `qsv.pro-${version}-1.x86_64.rpm`,
-                        // ],
+                        [
+                            "Linux (x86_64, deb)",
+                            `qsv.pro_${version}_amd64.deb`,
+                        ],
+                        [
+                            "Linux (x86_64, rpm)",
+                            `qsv.pro-${version}-1.x86_64.rpm`,
+                        ],
                         [
                             "Linux (x86_64, AppImage)",
                             `qsv.pro_${version}_amd64.AppImage`,
@@ -185,10 +185,6 @@ export const Hero = () => {
                                                         </>
                                                     )
                                                 )}
-                                                {platform === "linux" && <>
-                                                    <br />
-                                                    <small className="text-xs">We are currently resolving issues with the deb and rpm packages.</small>
-                                                </>}
                                             </div>
                                         )
                                     )}
