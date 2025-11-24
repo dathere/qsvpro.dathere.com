@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+    --color-customPrimary: rgb(0, 122, 255);
+    --color-customSecondary: rgb(0, 142, 200);
+    --color-customDarkBg1: rgb(31, 32, 35);
+    --color-customDarkBg2: rgb(38, 39, 43);
+    --color-customDarkBg3: rgb(48, 49, 54);
+    --color-customDarkBg3Hover: rgb(55, 56, 62);
+    --color-customContentSubtitle: rgb(178, 184, 205);
+    --color-customGrayBorder: rgb(255, 255, 255, 0.1);
+    --color-customGrayText: rgb(174, 178, 183);
+    --color-customDarkBgTransparent: rgb(31, 32, 35, 0.7);
+    --color-customDarkBgTransparentDarker: rgb(0, 0, 0, 0.5);
+    --color-customDarkBgTransparentLighter: rgb(48, 49, 54, 0.7);
+    --color-customBorderGray: rgb(255, 255, 255, 0.15);
+    --color-customBorderGrayDarker: rgb(255, 255, 255, 0.07);
+    --color-customButtonColored: rgb(0, 142, 200);
+}

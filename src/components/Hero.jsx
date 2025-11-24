@@ -70,7 +70,7 @@ export const Hero = () => {
             } catch (e) {
                 console.error(
                     "Unable to fetch API data from releases repository: " +
-                        String(e)
+                    String(e)
                 );
                 console.log("Showing default download button to user.");
             }
@@ -142,38 +142,36 @@ export const Hero = () => {
                                         (platform) => (
                                             <div
                                                 key={platform}
-                                                className={`mx-4 ${
-                                                    platform === OS
-                                                        ? "text-white text-xl font-bold"
-                                                        : "text-white"
-                                                }`}
+                                                className={`mx-4 ${platform === OS
+                                                    ? "text-white text-xl font-bold"
+                                                    : "text-white"
+                                                    }`}
                                             >
                                                 {downloadData[platform].map(
                                                     (download, index) => (
                                                         <>
                                                             {platform ===
                                                                 "windows" && (
-                                                                <div className="flex justify-center">
-                                                                    {/* Might not be an actual download, but store page clicked */}
-                                                                    <a data-rybbit-event="qsv_pro_download" data-rybbit-prop-platform="Microsoft Store" href="https://apps.microsoft.com/detail/xpffdj3f1jsztf?mode=full">
-                                                                        <img
-                                                                            src="https://get.microsoft.com/images/en-us%20light.svg"
-                                                                            width="200"
-                                                                        />
-                                                                    </a>
-                                                                </div>
-                                                            )}
+                                                                    <div className="flex justify-center">
+                                                                        {/* Might not be an actual download, but store page clicked */}
+                                                                        <a data-rybbit-event="qsv_pro_download" data-rybbit-prop-platform="Microsoft Store" href="https://apps.microsoft.com/detail/xpffdj3f1jsztf?mode=full">
+                                                                            <img
+                                                                                src="https://get.microsoft.com/images/en-us%20light.svg"
+                                                                                width="200"
+                                                                            />
+                                                                        </a>
+                                                                    </div>
+                                                                )}
                                                             <a
                                                                 key={index}
                                                                 href={`https://github.com/dathere/qsv-pro-releases/releases/download/${name}/${download[1]}`} // Replace with actual download path
                                                                 data-rybbit-event="qsv_pro_download"
                                                                 data-rybbit-prop-platform={download[0]}
-                                                                className={`block lg:min-w-96 text-white font-bold py-2 px-4 rounded mt-4 ${
-                                                                    platform ===
+                                                                className={`block lg:min-w-96 text-white font-bold py-2 px-4 rounded mt-4 ${platform ===
                                                                     OS
-                                                                        ? " bg-teal-600 hover:bg-teal-700"
-                                                                        : " bg-blue-500 hover:bg-blue-700"
-                                                                }`}
+                                                                    ? " bg-teal-600 hover:bg-teal-700"
+                                                                    : " bg-blue-500 hover:bg-blue-700"
+                                                                    }`}
                                                                 download
                                                             >
                                                                 {download[0]}
