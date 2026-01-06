@@ -39,7 +39,7 @@ export const Hero = () => {
                     ],
                     macos: [
                         ["macOS (Apple Silicon)", `qsv.pro_aarch64.app.tar.gz`],
-                        ["macOS (Intel)", `qsv.pro_x64.app.tar.gz`],
+                        // ["macOS (Intel)", `qsv.pro_x64.app.tar.gz`],
                         // `qsv.pro_${version}_x64.dmg`,
                         // `qsv.pro_${version}_aarch64.dmg`,
                     ],
@@ -79,7 +79,7 @@ export const Hero = () => {
 
     return (
         <section
-            className="w-screen flex justify-center items-center bg-customDarkBg1 mb-40 hero-bg-gradient pb-24 sm:pb-32 md:pb-44 lg:pb-0"
+            className="w-screen flex justify-center items-center bg-(--color-customDarkBg1) mb-40 hero-bg-gradient pb-24 sm:pb-32 md:pb-44 lg:pb-0"
             id="home"
         >
             <div className="w-full md:w-[1100px] flex flex-col justify-center items-center pt-16 md:pt-16 lg:pt-20 text-center">
