@@ -150,18 +150,6 @@ export const Hero = () => {
                                                 {downloadData[platform].map(
                                                     (download, index) => (
                                                         <>
-                                                            {platform ===
-                                                                "windows" && (
-                                                                    <div className="flex justify-center">
-                                                                        {/* Might not be an actual download, but store page clicked */}
-                                                                        <a data-rybbit-event="qsv_pro_download" data-rybbit-prop-platform="Microsoft Store" href="https://apps.microsoft.com/detail/xpffdj3f1jsztf?mode=full">
-                                                                            <img
-                                                                                src="https://get.microsoft.com/images/en-us%20light.svg"
-                                                                                width="200"
-                                                                            />
-                                                                        </a>
-                                                                    </div>
-                                                                )}
                                                             <a
                                                                 key={index}
                                                                 href={`https://github.com/dathere/qsv-pro-releases/releases/download/${name}/${download[1]}`} // Replace with actual download path
