@@ -41,30 +41,30 @@ const FeatureCarousel = () => {
                 "Use the qsv pro command available from the qsv command-line tool to import local files by their file path into the qsv pro Workflow or on Windows launch an Alacritty terminal running csvlens on the file.",
             image: commandDemo,
         },
-        {
-            title: "Configurator (Experimental) - Run qsv commands in an interactive GUI",
-            description:
-                "Run qsv commands in a graphical user interface and explore its stdout and stderr as raw output. The command's elapsed time is also provided. Note: Not all commands are supported and this feature may be broken/outdated.",
-            image: configuratorDemo,
-        },
+        // {
+        //     title: "Configurator (Experimental) - Run qsv commands in an interactive GUI",
+        //     description:
+        //         "Run qsv commands in a graphical user interface and explore its stdout and stderr as raw output. The command's elapsed time is also provided. Note: Not all commands are supported and this feature may be broken/outdated.",
+        //     image: configuratorDemo,
+        // },
     ];
 
     const OPTIONS = {}
     const PLUGINS = [Autoplay({ delay: 30000 })]
 
-  return (
-      <EmblaCarousel slides={SLIDES} options={OPTIONS} plugins={PLUGINS} />
-    // <div className="embla" ref={emblaRef}>
-    //   <div className="embla__container">
-    //       <div className="embla__slide"><img src={flowDemo.src}  /></div>
-    //       <div className="embla__slide"><img src={workflowDemo.src}  /></div>
-    //       <div className="embla__slide"><img src={toolboxDemo.src}  /></div>
-    //       <div className="embla__slide"><img src={commandDemo.src}  /></div>
-    //       <div className="embla__slide"><img src={apiDemo.src}  /></div>
-    //       <div className="embla__slide"><img src={configuratorDemo.src}  /></div>
-    //   </div>
-    // </div>
-  )
+    return (
+        <EmblaCarousel slides={SLIDES} options={OPTIONS} plugins={PLUGINS} />
+        // <div className="embla" ref={emblaRef}>
+        //   <div className="embla__container">
+        //       <div className="embla__slide"><img src={flowDemo.src}  /></div>
+        //       <div className="embla__slide"><img src={workflowDemo.src}  /></div>
+        //       <div className="embla__slide"><img src={toolboxDemo.src}  /></div>
+        //       <div className="embla__slide"><img src={commandDemo.src}  /></div>
+        //       <div className="embla__slide"><img src={apiDemo.src}  /></div>
+        //       <div className="embla__slide"><img src={configuratorDemo.src}  /></div>
+        //   </div>
+        // </div>
+    )
 }
 
 export default FeatureCarousel;

@@ -5,25 +5,25 @@ import { CheckArrowIcon } from "../assets/icons/CheckArrowIcon";
 
 const pricingData = [
     ["Import spreadsheets up to 1MB",
-    "Transform data with free recipes",
-    "View spreadsheet statistics and frequency data",
-    "Run Polars SQL queries",
-    "Upload/Download compatible data from a CKAN instance",
-    "List 1 CKAN instance at a time",
-    "Use free tools in Toolbox",
-    "Use qsv slice from Flow",
-    "Use qsv count and qsv slice in Configurator (experimental)",
-    "Export Workflow file data and various data table data to CSV, TSV, TAB, and SSV",
+        "Transform data with free recipes",
+        "View spreadsheet statistics and frequency data",
+        "Run Polars SQL queries",
+        "Upload/Download compatible data from a CKAN instance",
+        "List 1 CKAN instance at a time",
+        "Use free tools in Toolbox",
+        "Use qsv slice from Flow",
+        // "Use qsv count and qsv slice in Configurator (experimental)",
+        "Export Workflow file data and various data table data to CSV, TSV, TAB, and SSV",
     ],
     ["Import spreadsheets larger than 1MB",
-    "View extra statistics in the Workflow based on your file",
-    "Transform data with Pro recipes",
-    "List more than 1 CKAN instance",
-    "Use Pro tools in Toolbox",
-    "Use more qsv commands other than qsv slice from Flow",
-    "Use more qsv commands other than qsv count and qsv slice in Configurator (experimental)",
-    "Export Workflow file data and various data table data to 16 formats",
-    "Run csvlens on a spreadsheet or data table in a new Alacritty terminal (Windows only)"
+        "View extra statistics in the Workflow based on your file",
+        "Transform data with Pro recipes",
+        "List more than 1 CKAN instance",
+        "Use Pro tools in Toolbox",
+        "Use more qsv commands other than qsv slice from Flow",
+        // "Use more qsv commands other than qsv count and qsv slice in Configurator (experimental)",
+        "Export Workflow file data and various data table data to 16 formats",
+        "Run csvlens on a spreadsheet or data table in a new Alacritty terminal (Windows only)"
     ],
     []
 ];
@@ -171,7 +171,7 @@ export const Pricing = () => {
                                         <div className="inline-block text-center py-2 px-4 w-full custom-button-colored leading-loose transition duration-200">
                                             Start 30-day free trial
                                         </div>
-                                        <p className="mt-8 text-center text-white">After your trial ends in 30 days, you will be charged ${isMonthly ? "99.99" : "999.99"}, then ${isMonthly? "99.99" : "999.99"} every {isMonthly ? "month" : "year"}.</p>
+                                        <p className="mt-8 text-center text-white">After your trial ends in 30 days, you will be charged ${isMonthly ? "99.99" : "999.99"}, then ${isMonthly ? "99.99" : "999.99"} every {isMonthly ? "month" : "year"}.</p>
                                     </a>
                                 </div>
                             </div>
