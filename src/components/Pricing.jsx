@@ -171,7 +171,7 @@ export const Pricing = () => {
                                         <div className="inline-block text-center py-2 px-4 w-full custom-button-colored leading-loose transition duration-200">
                                             Start 30-day free trial
                                         </div>
-                                        <p className="mt-8 text-center text-white">After your trial ends in 30 days, you will be charged ${isMonthly ? "99.99" : "999.99"}, then ${isMonthly ? "99.99" : "999.99"} every {isMonthly ? "month" : "year"}.</p>
+                                        <p className="mt-8 text-center text-white">After your trial ends, you will be charged ${isMonthly ? "99.99" : "999.00"}, then ${isMonthly ? "99.99" : "999.00"} every {isMonthly ? "month" : "year"} (unless you cancel first).</p>
                                     </a>
                                 </div>
                             </div>
